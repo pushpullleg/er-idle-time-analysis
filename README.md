@@ -179,5 +179,5 @@ Free to use for datathon competitions and educational purposes.
 
 ---
 
-**Good luck with your datathon! 🚀**
+
 
