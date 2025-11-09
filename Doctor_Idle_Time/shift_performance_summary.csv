@@ -1,0 +1,4 @@
+Shift,Incidents,Avg_Wait,Median_Wait,Max_Wait,Total_Wait,Avg_Idle_Docs,Avg_Waiting
+DAY,965,36.39,35.0,87.0,35120.0,3.1,5.34
+EVENING,880,40.94,40.0,99.0,36025.0,3.03,4.16
+NIGHT,395,36.06,35.0,78.0,14244.0,1.53,2.0
