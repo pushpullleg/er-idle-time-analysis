@@ -43,7 +43,20 @@ Doctors On Duty - Doctors Actively Seeing Patients = Idle Doctors
 
 For any given timestamp `T`, a doctor is busy with a patient if:
 - The patient's `Doctor Seen` time ≤ `T` (doctor has started with patient)
-- AND the patient's `Exit Time` ≥ `T` (patient hasn't left yet)
+- AND the patient's `Exit Time` + **10-minute buffer** ≥ `T` (patient hasn't left yet OR doctor is in transition)
+
+### IMPORTANT: The 10-Minute Transition Buffer
+
+**We include a realistic 10-minute buffer AFTER each patient exits to account for:**
+- Documentation and charting
+- Hand washing and sanitization
+- Room turnover and cleanup
+- Quick mental reset/break
+- Reviewing next patient's chart
+
+**This prevents unrealistic assumptions that doctors can jump immediately from one patient to the next with zero downtime.**
+
+Only after this 10-minute buffer expires is a doctor considered truly "idle" if not with a next patient.
 
 ---
 
@@ -64,8 +77,10 @@ For **each patient** in our dataset:
    ```python
    active_doctors = count of patients where:
        - Doctor Seen ≤ Triage End
-       - AND Exit Time ≥ Triage End
+       - AND (Exit Time + 10-minute buffer) ≥ Triage End
    ```
+   
+   **Note:** The 10-minute buffer means a doctor is still considered "busy" for 10 minutes after a patient exits, allowing time for essential transition tasks.
    
    b. **Count how many patients are waiting:**
    ```python
@@ -95,18 +110,20 @@ For **each patient** in our dataset:
 - **Patient Jane** sees doctor at 11:00 AM
 - **Wait Time:** 30 minutes
 
-### Question: Were any doctors idle during Jane's wait?
+### Question: Were any doctors idle during Jane's wait (accounting for 10-min buffer)?
 
-**Step 1:** At 10:30 AM, count active doctors:
-- Patient Bob: Doctor Seen = 10:00 AM, Exit = 10:45 AM ✓ (Busy)
-- Patient Alice: Doctor Seen = 10:15 AM, Exit = 11:00 AM ✓ (Busy)
-- Patient Mike: Doctor Seen = 9:50 AM, Exit = 10:25 AM ✗ (Already left)
+**Step 1:** At 10:30 AM, count active doctors (including 10-min buffer):
+- Patient Bob: Doctor Seen = 10:00 AM, Exit = 10:45 AM ✓ (Busy - patient still there)
+- Patient Alice: Doctor Seen = 10:15 AM, Exit = 11:00 AM ✓ (Busy - patient still there)
+- Patient Mike: Doctor Seen = 9:50 AM, Exit = 10:25 AM
+  - With 10-min buffer: 10:25 + 10 min = 10:35 AM
+  - At 10:30 AM, still in buffer period ✓ (Considered busy)
 
-**Active doctors = 2**
+**Active doctors = 3** (including one in transition buffer)
 
 **Step 2:** Calculate idle doctors:
 ```
-Idle Doctors = 4 (on duty) - 2 (active) = 2 doctors
+Idle Doctors = 4 (on duty) - 3 (active) = 1 doctor
 ```
 
 **Step 3:** Count waiting patients at 10:30 AM:
@@ -114,9 +131,9 @@ Idle Doctors = 4 (on duty) - 2 (active) = 2 doctors
 - Potentially others...
 
 **Conclusion:**
-- 2 doctors were idle
+- 1 doctor was idle (even with 10-min buffer)
 - At least 1 patient (Jane) was waiting
-- **This is a bottleneck!** Jane waited 30 minutes despite having 2 available doctors.
+- **This is a bottleneck!** Jane waited 30 minutes despite having 1 available doctor.
 
 ---
 
@@ -150,15 +167,15 @@ Why does this happen?
 
 ### 1. **Bottleneck Event Count**
 - Total instances where `idle_doctors > 0` AND `waiting_patients > 0`
-- **Found: 2,240 events (14.9% of all visits)**
+- **Found: 2,179 events (14.5% of all visits)** *(with 10-minute transition buffer)*
 
 ### 2. **Average Wait Time During Bottlenecks**
 - Mean time between Triage End and Doctor Seen when inefficiency detected
-- **Found: 38.1 minutes**
+- **Found: 38.2 minutes**
 
 ### 3. **Total Wasted Patient-Hours**
 - Sum of all wait times during bottleneck events
-- **Found: 1,423 hours in Q1 2025**
+- **Found: 1,387 hours in Q1 2025**
 
 ### 4. **Average Idle Doctors**
 - Mean number of available doctors during bottleneck periods
@@ -185,14 +202,16 @@ Triage Level: 3
 
 ### Analysis at 14:30:00 (Triage End):
 
-**Active Doctors:**
-- Patient A: Doctor Seen=14:00, Exit=14:45 ✓
-- Patient B: Doctor Seen=14:15, Exit=15:00 ✓
-- Patient C: Doctor Seen=13:50, Exit=14:25 ✗ (left already)
-= **2 active doctors**
+**Active Doctors (including 10-min buffer):**
+- Patient A: Doctor Seen=14:00, Exit=14:45 ✓ (still with patient)
+- Patient B: Doctor Seen=14:15, Exit=15:00 ✓ (still with patient)
+- Patient C: Doctor Seen=13:50, Exit=14:25
+  - With 10-min buffer: 14:25 + 10 min = 14:35
+  - At 14:30, still in buffer period ✓ (considered busy)
+= **3 active doctors**
 
 **Idle Doctors:**
-= 4 - 2 = **2 idle doctors**
+= 4 - 3 = **1 idle doctor**
 
 **Waiting Patients:**
 - Current patient (triage just ended)
@@ -202,7 +221,7 @@ Triage Level: 3
 
 **Verdict:** ❌ **BOTTLENECK DETECTED**
 - Wait Time: 38 minutes
-- 2 doctors idle
+- 1 doctor idle (even with 10-min buffer)
 - 3 patients waiting
 
 ---
@@ -240,18 +259,20 @@ Additional quarterly capacity: 208 - 167 = 41 patients/day
 
 1. **Doctors are the bottleneck resource** (not beds, equipment, or nurses)
 2. **All doctors are interchangeable** (any doctor can see any patient post-triage)
-3. **"Active" time = Doctor Seen to Exit Time** (entire patient encounter)
-4. **No external factors** preventing patient-doctor matching (language barriers, specialist requirements, etc.)
-5. **Data accuracy** - timestamps are accurate and complete
+3. **"Active" time = Doctor Seen to Exit Time + 10-minute buffer** (patient encounter + transition tasks)
+4. **10-minute buffer accounts for:** documentation/charting, handwashing, room turnover, mental reset, chart review for next patient
+5. **No external factors** preventing patient-doctor matching (language barriers, specialist requirements, etc.)
+6. **Data accuracy** - timestamps are accurate and complete
 
 ---
 
 ## 10. Limitations of This Analysis
 
 ### What This Analysis DOES Show:
-✓ Times when doctors were mathematically available but patients waited
-✓ Scale of the inefficiency (2,240 events, 38 min avg wait)
+✓ Times when doctors were mathematically available but patients waited (even with 10-min buffer)
+✓ Scale of the inefficiency (2,179 events, 38.2 min avg wait, 1,387 hours)
 ✓ Patterns by shift, hour, triage level
+✓ Conservative estimate (includes realistic transition time)
 
 ### What This Analysis DOES NOT Show:
 ✗ WHY specific doctors didn't see specific patients (root cause)
@@ -287,16 +308,16 @@ Additional quarterly capacity: 208 - 167 = 41 patients/day
 
 This analysis uses **concurrent activity tracking** to identify moments when:
 - Patients were waiting for doctors
-- Doctors were mathematically available (not actively with patients)
+- Doctors were mathematically available (not actively with patients, even accounting for 10-min buffer)
 
 The gap represents a **process optimization opportunity** - not a staffing problem, but a **flow problem**.
 
 **The data proves:**
-- The problem exists (2,240 instances)
-- It's significant (38 min avg delay, 1,423 hours wasted)
+- The problem exists (2,179 instances, even with generous 10-min buffer)
+- It's significant (38.2 min avg delay, 1,387 hours wasted)
 - It's fixable (process improvements, not hiring)
 
-**Mathematical certainty:** If `idle_doctors > 0` AND `waiting_patients > 0`, there's room for improvement.
+**Mathematical certainty:** If `idle_doctors > 0` AND `waiting_patients > 0` (with 10-min buffer), there's room for improvement.
 
 ---
 
@@ -319,11 +340,12 @@ for each patient in dataset:
     # Snapshot at the moment triage ended
     snapshot_time = patient.triage_end
     
-    # Count doctors actively seeing patients at this moment
+    # Count doctors actively seeing patients at this moment (including 10-min buffer)
     active_doctors = count_where(
         all_patients,
-        doctor_seen <= snapshot_time AND exit_time >= snapshot_time
+        doctor_seen <= snapshot_time AND (exit_time + 10_minutes) >= snapshot_time
     )
+    # Note: 10-min buffer accounts for transition time after patient exits
     
     # Count patients waiting at this moment
     waiting_patients = count_where(

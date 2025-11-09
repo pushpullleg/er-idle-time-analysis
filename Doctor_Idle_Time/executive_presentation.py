@@ -17,6 +17,11 @@ for col in time_cols:
 df = df[df['Hospital ID'] == 'MC_ER_EAST'].copy()
 
 print("Detecting idle scenarios...")
+# IMPORTANT: Using 10-minute transition buffer for doctors
+# This accounts for realistic time needed between patients:
+# - Documentation/charting, handwashing, room turnover, chart review
+transition_buffer = pd.Timedelta(minutes=10)
+
 idle_events = []
 for idx, row in df.iterrows():
     if pd.isna(row['Triage End']) or pd.isna(row['Doctor Seen']):
@@ -25,7 +30,13 @@ for idx, row in df.iterrows():
     if wait_time <= 0:
         continue
     triage_end_time = row['Triage End']
-    active_doctors = df[(df['Doctor Seen'] <= triage_end_time) & (df['Exit Time'] >= triage_end_time)].shape[0]
+    
+    # Count active doctors WITH transition buffer (realistic!)
+    active_doctors = df[
+        (df['Doctor Seen'] <= triage_end_time) & 
+        (df['Exit Time'] + transition_buffer >= triage_end_time)
+    ].shape[0]
+    
     waiting_patients = df[(df['Triage End'] <= triage_end_time) & (df['Doctor Seen'] >= triage_end_time)].shape[0]
     doctors_on_duty = row['Doctors On Duty']
     idle_doctors = doctors_on_duty - active_doctors
@@ -176,10 +187,17 @@ for name, start, dur, color in phases:
     ax.text(start+dur/2, 10, name, ha='center', va='center', fontweight='bold')
 
 initiatives = [
-    ('Queue dashboard', 0, 0.5, 0), ('Shift protocol', 0.3, 0.7, 0), ('Utilization tracking', 0.5, 0.5, 0),
-    ('Auto assignment', 1, 1.5, 1), ('Triage streamline', 1.5, 1, 1), ('Fast-track', 2, 1, 1),
-    ('Predictive staffing', 3, 1.5, 2), ('Dynamic allocation', 4, 1, 2),
-    ('Monitoring', 5, 3, 3), ('Training', 5.5, 2.5, 3), ('Refinement', 6, 2, 3)
+    ('Queue visibility dashboard', 0, 0.8, 0), 
+    ('Shift handoff protocol', 0.4, 0.6, 0), 
+    ('Doctor utilization tracking', 0.6, 0.5, 0),
+    ('Automated patient-doctor assignment', 1, 1.8, 1), 
+    ('Real-time queue alerts', 1.8, 1.2, 1), 
+    ('Handoff workflow optimization', 2.2, 0.8, 1),
+    ('Predictive assignment algorithm', 3, 1.5, 2), 
+    ('Cross-shift coordination tools', 4, 1.2, 2),
+    ('Real-time bottleneck monitoring', 5, 3, 3), 
+    ('Staff training on new workflows', 5.5, 2.5, 3), 
+    ('Continuous process refinement', 6.5, 1.5, 3)
 ]
 
 for i, (name, start, dur, phase_idx) in enumerate(initiatives):

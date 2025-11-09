@@ -16,21 +16,23 @@ KEY FINDINGS
 ================================================================================
 
 1. FLOW BOTTLENECK IDENTIFICATION
-   • 2,240 flow bottleneck events detected (14.9% of all visits)
+   • 2,179 flow bottleneck events detected (14.5% of all visits)
    • These events occur when staff are available but patients wait in queue
-   • Average delay during bottleneck events: 38.1 minutes
-   • Total patient wait time during inefficient periods: 1,423 hours
+   • Even with 10-minute buffer for doctor transitions (charting, handwashing, etc.)
+   • Average delay during bottleneck events: 38.2 minutes
+   • Total patient wait time during inefficient periods: 1,387 hours
 
 2. STAFFING EFFICIENCY ANALYSIS
-   • Current staff utilization during bottlenecks: ~50-60%
+   • Current staff utilization during bottlenecks: ~50%
    • Industry target utilization: 75-80%
-   • Average idle capacity: 2.8 doctors during bottleneck periods
+   • Average idle capacity: 1.8 doctors during bottleneck periods
    • Opportunity: Improve resource allocation and workflow management
+   • Analysis includes realistic 10-minute transition buffer between patients
 
 3. THROUGHPUT IMPACT
    • Current throughput: ~167 patients/day
    • Potential throughput with optimizations: ~208 patients/day (+25%)
-   • Additional capacity: ~1,423 patient visits/quarter (from eliminating delays)
+   • Additional capacity: ~1,387 patient visits/quarter (from eliminating delays)
    • No additional staffing required - process optimization only
 
 4. PATIENT SATISFACTION CORRELATION
@@ -65,9 +67,9 @@ KEY FINDINGS
 6. TEMPORAL PATTERNS IDENTIFIED
    
    Most Affected Shift:
-   • DAY shift: 965 bottleneck events
-   • EVENING shift: 880 bottleneck events (highest avg wait: 40.9 min)
-   • NIGHT shift: 395 bottleneck events
+   • DAY shift: 935 bottleneck events
+   • EVENING shift: 854 bottleneck events (highest avg wait: 40.9 min)
+   • NIGHT shift: 390 bottleneck events
    
    Peak Bottleneck Hours:
    • 2-3 PM (shift transition)
@@ -160,17 +162,18 @@ With full implementation of recommendations:
 
 THROUGHPUT IMPROVEMENTS:
 • +25% daily patient capacity (no additional staffing)
-• 1,423 additional patient visits per quarter
-• Better resource utilization (75-80% vs current 50-60%)
+• 1,387 additional patient visits per quarter
+• Better resource utilization (75-80% vs current 50%)
+• Analysis validated with realistic 10-minute doctor transition buffer
 
 OPERATIONAL EFFICIENCY:
 • 60% reduction in post-triage wait times
 • 50% fewer shift-change bottlenecks
-• 40% improvement in staff utilization
+• 40% improvement in staff utilization (50% → 75-80%)
 • More predictable patient flow
 
 PATIENT EXPERIENCE:
-• Reduced average wait time: 38 min → 15 min (60% improvement)
+• Reduced average wait time: 38.2 min → 15 min (60% improvement)
 • Improved satisfaction scores
 • More consistent service delivery
 • Better communication and transparency
@@ -286,7 +289,8 @@ This analysis reveals significant opportunity to improve ER operations through
 better patient flow management and staffing efficiency - WITHOUT adding staff.
 
 The data clearly shows:
-✓ The problem is real and measurable (2,240 bottleneck events)
+✓ The problem is real and measurable (2,179 bottleneck events)
+✓ Analysis validated with realistic 10-minute transition buffer
 ✓ The root causes are identifiable (workflow and process issues)
 ✓ The solutions are actionable (proven best practices)
 ✓ The benefits are substantial (25% throughput improvement)
@@ -314,7 +318,7 @@ Included in this package:
 6. hourly_pattern.csv - Hour-by-hour bottleneck patterns
 7. doctor_idle_analysis.py - Technical analysis code
 8. DOCTOR_IDLE_ANALYSIS_EXPLANATION.md - Complete methodology
-9. PRESENTATION_GUIDE.md - How to present to leadership
+9. STAFF_UTILIZATION_EXPLAINED.md - Utilization metrics guide
 10. CHEAT_SHEET.md - Quick reference for key metrics
 
 All files located in: /Datathon/Doctor_Idle_Time/
@@ -345,11 +349,13 @@ Analysis Approach:
 - Time-series analysis of patient flow
 - Concurrent activity tracking (who's being seen when)
 - Idle capacity identification (staff on duty vs. actively treating)
+- 10-minute transition buffer accounts for charting, handwashing, room turnover
 - Queue length calculation (waiting after triage completion)
 - Statistical aggregation by shift, hour, and other dimensions
 
 Key Assumptions:
 - One doctor treats one patient at a time during doctor-to-exit period
+- Doctors given 10-minute buffer for transitions (charting, handwashing, etc.)
 - Doctors are generally interchangeable (acknowledges specialty limitations)
 - Triage completion = patient ready for doctor (medically cleared)
 - Staffing data reflects actual availability

@@ -8,6 +8,19 @@ Approach:
 2. Compare active doctors vs. doctors on duty
 3. Identify if patients are waiting while doctors are available
 4. Calculate potential idle time and its impact
+
+IMPORTANT REALISTIC ASSUMPTIONS:
+- Doctors need TRANSITION TIME between patients (default: 10 minutes)
+- This accounts for:
+  * Post-patient documentation/charting
+  * Hand washing and sanitization
+  * Room turnover and cleanup
+  * Brief mental reset/break
+  * Reviewing next patient's chart
+- We do NOT expect zero-downtime patient-to-patient transitions
+- Only flag as "idle" if doctor is available AFTER this reasonable buffer
+
+This prevents unrealistic expectations and focuses on genuine flow bottlenecks.
 """
 
 import pandas as pd
@@ -37,14 +50,27 @@ print("\n" + "="*80)
 print("\n ANALYSIS 1: IDLE DOCTOR DETECTION")
 print("="*80)
 
-def count_active_doctors_at_time(all_visits, check_time):
+def count_active_doctors_at_time(all_visits, check_time, transition_buffer_minutes=10):
     """
     Count how many doctors are actively seeing patients at a given time.
     A doctor is "active" if a patient has been seen but hasn't exited yet.
+    
+    IMPORTANT: We add a transition buffer (default 10 min) after patient exit
+    to account for:
+    - Documentation/charting time
+    - Hand washing/sanitization
+    - Room turnover
+    - Quick break/mental reset
+    - Reviewing next patient chart
+    
+    This prevents unrealistic assumption that doctors jump immediately 
+    from one patient to the next with zero downtime.
     """
+    # Doctor is considered busy from when they start seeing patient
+    # until EXIT TIME + BUFFER (to allow for post-patient tasks)
     active = all_visits[
         (all_visits['Doctor Seen'] <= check_time) & 
-        (all_visits['Exit Time'] > check_time)
+        (all_visits['Exit Time'] + pd.Timedelta(minutes=transition_buffer_minutes) > check_time)
     ]
     return len(active)
 
@@ -81,7 +107,9 @@ for hospital in df['Hospital ID'].unique():
             
             if wait_time > 5:  # Only consider waits > 5 minutes
                 # Check at the moment triage ended
-                active_doctors = count_active_doctors_at_time(shift_df, triage_end)
+                # Use 10-minute buffer: doctor needs time after patient exits for 
+                # documentation, handwashing, room turnover, chart review
+                active_doctors = count_active_doctors_at_time(shift_df, triage_end, transition_buffer_minutes=10)
                 waiting_patients = count_waiting_patients_at_time(shift_df, triage_end)
                 idle_doctors = doctors_on_duty - active_doctors
                 
