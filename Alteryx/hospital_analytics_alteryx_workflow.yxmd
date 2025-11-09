@@ -1,0 +1,1684 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <!-- =============================================== -->
+    <!-- SECTION 1: DATA INPUT LAYER -->
+    <!-- =============================================== -->
+    
+    <!-- Input: Patient Demographics -->
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>📊 Patient Demographics</Name>
+          <DefaultAnnotationText>Hospital_Patients.csv
+Input: Patient master data with demographics</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Patient ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+            <Field name="Age" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+            <Field name="Insurance" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    
+    <!-- Input: Hospital Visits (Main Fact Table) -->
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>🏥 Hospital Visits (FACT TABLE)</Name>
+          <DefaultAnnotationText>Hospital_Visits.csv
+Core transaction data: Visit timelines and triage</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Visit ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Patient ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Arrival Time" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Registration Start" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Registration End" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Triage Start" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Triage End" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Doctor Seen" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Exit Time" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Triage Level" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Hospital ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    
+    <!-- Input: Facility Information -->
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="600" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>🏢 Facility Master</Name>
+          <DefaultAnnotationText>Hospital_Facility.csv
+Dimension: Hospital capacity and infrastructure</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Hospital ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Hospital Name" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Facility Size (Beds)" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="ICU Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Fast Track Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Regular Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    
+    <!-- Input: Patient Outcomes -->
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>📈 Patient Outcomes</Name>
+          <DefaultAnnotationText>Hospital_Outcomes.csv
+Disposition and satisfaction scores</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Visit ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="V_String" />
+            <Field name="Disposition" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="V_String" />
+            <Field name="Patient Satisfaction" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    
+    <!-- Input: Staffing Data -->
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>👥 Staffing Schedule</Name>
+          <DefaultAnnotationText>Hospital_Staffing_EAST_LOCATION.csv
+Resource allocation by shift</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Shift" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Nurses On Duty" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Doctors On Duty" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Specialists On Call" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Fast Track Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+
+    <!-- =============================================== -->
+    <!-- SECTION 2: VISITS DATA TRANSFORMATION PIPELINE -->
+    <!-- =============================================== -->
+    
+    <!-- DateTime Parsing: Handle Multiple Formats -->
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="180" y="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Arrival Time" />
+            <Field name="Registration Start" />
+            <Field name="Registration End" />
+            <Field name="Triage Start" />
+            <Field name="Triage End" />
+            <Field name="Doctor Seen" />
+            <Field name="Exit Time" />
+            <Field name="Visit ID" selected="False" />
+            <Field name="Patient ID" selected="False" />
+            <Field name="Triage Level" selected="False" />
+            <Field name="Hospital ID" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>IF [_CurrentField_]="" THEN NULL() 
+ELSEIF Contains([_CurrentField_],"Jan") OR Contains([_CurrentField_],"Feb") OR Contains([_CurrentField_],"Mar") OR Contains([_CurrentField_],"Apr") OR Contains([_CurrentField_],"May") OR Contains([_CurrentField_],"Jun") OR Contains([_CurrentField_],"Jul") OR Contains([_CurrentField_],"Aug") OR Contains([_CurrentField_],"Sep") OR Contains([_CurrentField_],"Oct") OR Contains([_CurrentField_],"Nov") OR Contains([_CurrentField_],"Dec") THEN DateTimeParse([_CurrentField_],"%b %d %Y %H:%M") 
+ELSEIF Contains([_CurrentField_], "T") THEN DateTimeParse([_CurrentField_], "%Y-%m-%dT%H:%M")
+ELSE DateTimeParse([_CurrentField_],"%m/%d/%Y %H:%M") ENDIF</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="DateTime" size="19" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>🕐 Parse DateTime Fields</Name>
+          <DefaultAnnotationText>Intelligent multi-format datetime parsing
+Handles 3 formats: ISO, US, Month-Day-Year</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+
+    <!-- Select: Organize Field Order -->
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="306" y="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Visit ID" selected="True" type="String" size="7" />
+            <SelectField field="Patient ID" selected="True" type="String" size="13" />
+            <SelectField field="Hospital ID" selected="True" type="String" size="10" />
+            <SelectField field="Arrival Time" selected="True" />
+            <SelectField field="Registration Start" selected="True" />
+            <SelectField field="Registration End" selected="True" />
+            <SelectField field="Triage Start" selected="True" />
+            <SelectField field="Triage End" selected="True" />
+            <SelectField field="Doctor Seen" selected="True" />
+            <SelectField field="Exit Time" selected="True" />
+            <SelectField field="Triage Level" selected="True" type="String" size="15" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>✅ Format &amp; Type</Name>
+          <DefaultAnnotationText>Set proper data types and field order</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+
+    <!-- Standardize Triage Levels -->
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="432" y="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Triage Level" />
+            <Field name="Visit ID" selected="False" />
+            <Field name="Patient ID" selected="False" />
+            <Field name="Hospital ID" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression><![CDATA[IF Contains(LowerCase([Triage Level]), "critical") OR [Triage Level] = "resuscitation" THEN "1"
+ELSEIF Contains(LowerCase([Triage Level]), "emergent") OR [Triage Level] = "high" THEN "2"
+ELSEIF Contains(LowerCase([Triage Level]), "urgent") OR [Triage Level] = "moderate" THEN "3"
+ELSEIF Contains(LowerCase([Triage Level]), "nonurgent") OR [Triage Level] = "low" THEN "4"
+ELSE [Triage Level]
+ENDIF]]></Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>🔢 Normalize Triage Levels</Name>
+          <DefaultAnnotationText>Standardize triage codes to 1-4 scale
+Maps text descriptions to numeric priority</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+
+    <!-- Calculate KPIs: Durations & Metrics -->
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="558" y="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeDiff([Exit Time], [Arrival Time], &quot;minutes&quot;)" field="TotalTime(Arrival To Exit)" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="IF ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &gt;= 7 AND ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &lt; 15 THEN &quot;DAY&quot;
+ELSEIF ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &gt;= 15 AND ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &lt; 23 THEN &quot;EVENING&quot;
+ELSE &quot;NIGHT&quot;
+ENDIF" field="Arrived At Shift" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;))" field="Arrival Hour" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Doctor Seen], [Triage End], &quot;minutes&quot;)" field="WaitTime after Triage" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Exit Time], [Doctor Seen], &quot;minutes&quot;)" field="DoctorVisit to Exit" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Registration End], [Registration Start], &quot;minutes&quot;)" field="Registration process time" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Triage End], [Triage Start], &quot;minutes&quot;)" field="Triage process time" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Registration Start], [Arrival Time], &quot;minutes&quot;)" field="WaitTime for Reg" size="2" type="Int16" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>⏱️ Calculate Duration KPIs</Name>
+          <DefaultAnnotationText>8 calculated metrics:
+• Total time in system
+• Wait times by stage
+• Shift classification
+• Process durations</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+
+    <!-- Extract Date Components -->
+    <Node ToolID="105">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="684" y="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeFormat([Arrival Time], &quot;%m/%d/%Y&quot;)" field="Visit Date" size="64" type="String" />
+            <FormulaField expression="DateTimeFormat([Arrival Time], &quot;%H:%M:%S&quot;)" field="Visit Time" size="8" type="Time" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>📅 Extract Date/Time</Name>
+          <DefaultAnnotationText>Split datetime into Date and Time
+For join and aggregation purposes</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+
+    <!-- =============================================== -->
+    <!-- SECTION 3: DIMENSION TABLES PREP -->
+    <!-- =============================================== -->
+    
+    <!-- Facility: Auto Field -->
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="180" y="600" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Hospital ID" selected="True" />
+            <Field field="Hospital Name" selected="True" />
+            <Field name="Facility Size (Beds)" selected="True" />
+            <Field field="ICU Beds" selected="True" />
+            <Field field="Fast Track Beds" selected="True" />
+            <Field field="Regular Beds" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>🔧 Auto Data Types</Name>
+          <DefaultAnnotationText>Optimize field types automatically</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Hospital ID" size="10" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="String" />
+            <Field name="Hospital Name" size="21" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="String" />
+            <Field name="Facility Size (Beds)" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+            <Field name="ICU Beds" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+            <Field name="Fast Track Beds" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+            <Field name="Regular Beds" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+
+    <!-- Outcomes: Data Prep -->
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="180" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Visit ID" selected="True" />
+            <Field field="Disposition" selected="True" />
+            <Field field="Patient Satisfaction" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>🔧 Auto Data Types</Name>
+          <DefaultAnnotationText>Optimize field types</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Visit ID" size="7" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="String" />
+            <Field name="Disposition" size="11" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="String" />
+            <Field name="Patient Satisfaction" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+
+    <!-- Outcomes: Data Cleansing -->
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="306" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="True" />
+          <RemoveNullColumns value="True" />
+          <RemoveTabsLineBreaksAndDuplicates value="False" />
+          <RemoveLeadingAndTrailingWhitespace value="True" />
+          <RemoveAllWhitespaces value="False" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="Visit ID" selected="True" />
+            <Field value="Disposition" selected="True" />
+            <Field value="Patient Satisfaction" selected="True" />
+            <Field value="*Unknown" selected="False" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="True" />
+          <Checkbox_ReplaceNumericColumns value="True" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="True" />
+          <ReplaceWithZero value="True" />
+          <CheckBox_ModifyCase value="True" />
+          <ModifyCase value="upper" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🧹 Data Cleanse</n>
+          <DefaultAnnotationText>Remove nulls, trim whitespace
+Standardize to uppercase</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+
+    <!-- Outcomes: Standardize Disposition -->
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="432" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Disposition] = &quot;DISCH&quot; THEN &quot;DISCHARGED&quot;
+ELSEIF [Disposition] = &quot;ADM&quot; THEN &quot;ADMITTED&quot;
+ELSEIF [Disposition] = &quot;TRANSFER&quot; THEN &quot;TRANSFERRED&quot;
+ELSE [Disposition]
+ENDIF" field="Disposition" size="11" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📝 Expand Abbreviations</n>
+          <DefaultAnnotationText>Convert disposition codes to full text
+DISCH → DISCHARGED, ADM → ADMITTED</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+
+    <!-- Patient: Auto Field -->
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="180" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Patient ID" selected="True" />
+            <Field field="Age" selected="True" />
+            <Field field="Gender" selected="True" />
+            <Field field="Insurance" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🔧 Auto Data Types</n>
+          <DefaultAnnotationText>Optimize field types</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Patient ID" size="13" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="String" />
+            <Field name="Age" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="Byte" />
+            <Field name="Gender" size="6" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="String" />
+            <Field name="Insurance" size="10" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+
+    <!-- Patient: Data Cleansing -->
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="306" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="True" />
+          <RemoveNullColumns value="True" />
+          <RemoveTabsLineBreaksAndDuplicates value="True" />
+          <RemoveLeadingAndTrailingWhitespace value="True" />
+          <RemoveAllWhitespaces value="True" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="Patient ID" selected="True" />
+            <Field value="Age" selected="True" />
+            <Field value="Gender" selected="True" />
+            <Field value="Insurance" selected="True" />
+            <Field value="*Unknown" selected="False" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="True" />
+          <Checkbox_ReplaceNumericColumns value="True" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="True" />
+          <ReplaceWithZero value="True" />
+          <CheckBox_ModifyCase value="True" />
+          <ModifyCase value="upper" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🧹 Data Cleanse</n>
+          <DefaultAnnotationText>Comprehensive cleaning:
+Remove nulls, duplicates, whitespace
+Uppercase standardization</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+
+    <!-- Patient: Fix Insurance Typos -->
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="432" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Insurance] = &quot;MEDICAD&quot; THEN &quot;MEDICAID&quot;
+ELSEIF [Insurance] = &quot;PRIVAT&quot; THEN &quot;PRIVATE&quot;
+ELSEIF [Insurance] = &quot;MEDCARE&quot; THEN &quot;MEDICARE&quot;
+ELSEIF [Insurance] = &quot;UNINSURRED&quot; THEN &quot;UNINSURED&quot;
+ELSE [Insurance]
+ENDIF" field="Insurance" size="10" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>✏️ Fix Data Quality Issues</n>
+          <DefaultAnnotationText>Correct misspelled insurance types
+MEDICAD → MEDICAID, UNINSURRED → UNINSURED</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+
+    <!-- Staffing: Parse Date -->
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="180" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Date</InputFieldName>
+          <Language>English</Language>
+          <Format>MM-dd-yyyy</Format>
+          <OutputFieldName>Staff Date</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📅 Parse Date</n>
+          <DefaultAnnotationText>Convert MM-dd-yyyy to DateTime</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+
+    <!-- Staffing: Select & Rename -->
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="306" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="False" type="Date" size="10" />
+            <SelectField field="Staff Date" selected="True" />
+            <SelectField field="Shift" selected="True" type="String" size="10" />
+            <SelectField field="Nurses On Duty" selected="True" type="Int16" size="2" />
+            <SelectField field="Doctors On Duty" selected="True" type="Int16" size="2" />
+            <SelectField field="Specialists On Call" selected="True" type="Int16" size="2" />
+            <SelectField field="Fast Track Beds" selected="True" rename="Fast Tracks Beds on shift" type="Int16" size="2" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>✅ Format &amp; Rename</n>
+          <DefaultAnnotationText>Organize fields and rename for clarity</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+
+    <!-- Staffing: Data Cleanse -->
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="432" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="False" />
+          <RemoveNullColumns value="False" />
+          <RemoveTabsLineBreaksAndDuplicates value="False" />
+          <RemoveLeadingAndTrailingWhitespace value="True" />
+          <RemoveAllWhitespaces value="False" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="Staff Date" selected="True" />
+            <Field value="Shift" selected="True" />
+            <Field value="Nurses On Duty" selected="True" />
+            <Field value="Doctors On Duty" selected="True" />
+            <Field value="Specialists On Call" selected="True" />
+            <Field value="Fast Track Beds" selected="True" />
+            <Field value="*Unknown" selected="True" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="True" />
+          <Checkbox_ReplaceNumericColumns value="True" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="True" />
+          <ReplaceWithZero value="True" />
+          <CheckBox_ModifyCase value="True" />
+          <ModifyCase value="upper" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🧹 Data Cleanse</n>
+          <DefaultAnnotationText>Trim whitespace, uppercase</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+
+    <!-- Staffing: Create Shift Time Windows -->
+    <Node ToolID="107">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="558" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeFormat([Staff Date], &quot;%m/%d/%Y&quot;)" field="Date" size="64" type="String" enabled="true" />
+            <FormulaField expression="IF [Shift] = &quot;DAY&quot; THEN &quot;07:00:00&quot;
+ELSEIF [Shift] = &quot;EVENING&quot; THEN &quot;15:00:00&quot;
+ELSE &quot;23:00:00&quot;
+ENDIF" field="ShiftStart" size="8" type="Time" enabled="true" />
+            <FormulaField expression="IF [Shift] = &quot;DAY&quot; THEN &quot;14:59:59&quot;
+ELSEIF [Shift] = &quot;EVENING&quot; THEN &quot;22:59:59&quot;
+ELSE &quot;06:59:59&quot;
+ENDIF" field="ShiftEnd" size="8" type="Time" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>⏰ Define Shift Windows</n>
+          <DefaultAnnotationText>Create time boundaries for shift matching:
+DAY: 07:00-14:59
+EVENING: 15:00-22:59
+NIGHT: 23:00-06:59</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+
+    <!-- =============================================== -->
+    <!-- SECTION 4: DATA INTEGRATION LAYER -->
+    <!-- =============================================== -->
+    
+    <!-- Join: Visits + Facility -->
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="810" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Hospital ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Hospital ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Visit ID" selected="True" input="Left_" />
+                <SelectField field="Left_Patient ID" selected="True" input="Left_" />
+                <SelectField field="Left_Hospital ID" selected="True" input="Left_" />
+                <SelectField field="Left_Arrival Time" selected="True" input="Left_" />
+                <SelectField field="Left_Registration Start" selected="True" input="Left_" />
+                <SelectField field="Left_Registration End" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Start" selected="True" input="Left_" />
+                <SelectField field="Left_Triage End" selected="True" input="Left_" />
+                <SelectField field="Left_Doctor Seen" selected="True" input="Left_" />
+                <SelectField field="Left_Exit Time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Level" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Date" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime for Reg" selected="True" input="Left_" />
+                <SelectField field="Left_Registration process time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage process time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime after Triage" selected="True" input="Left_" />
+                <SelectField field="Left_DoctorVisit to Exit" selected="True" input="Left_" />
+                <SelectField field="Left_TotalTime(Arrival To Exit)" selected="True" input="Left_" />
+                <SelectField field="Left_Arrival To Exit" selected="True" input="Left_" />
+                <SelectField field="Left_Arrived At Shift" selected="False" input="Left_" />
+                <SelectField field="Left_Arrival Hour" selected="False" input="Left_" />
+                <SelectField field="Right_Hospital ID" selected="False" rename="Right_Hospital ID" input="Right_" />
+                <SelectField field="Right_Hospital Name" selected="False" input="Right_" />
+                <SelectField field="Right_Facility Size (Beds)" selected="True" input="Right_" />
+                <SelectField field="Right_ICU Beds" selected="True" input="Right_" />
+                <SelectField field="Right_Fast Track Beds" selected="True" input="Right_" />
+                <SelectField field="Right_Regular Beds" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🔗 JOIN: Visits → Facility</n>
+          <DefaultAnnotationText>Enrich visits with hospital capacity data
+Key: Hospital ID</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+
+    <!-- Join: + Outcomes -->
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="936" y="600" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Visit ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Visit ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Visit ID" selected="False" rename="Right_Visit ID" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🔗 JOIN: + Outcomes</n>
+          <DefaultAnnotationText>Add disposition and satisfaction scores
+Key: Visit ID</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+
+    <!-- Join: + Patient Demographics -->
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1062" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Patient ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Patient ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Patient ID" selected="False" rename="Right_Patient ID" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🔗 JOIN: + Patient Data</n>
+          <DefaultAnnotationText>Add age, gender, insurance
+Key: Patient ID</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+
+    <!-- Join: + Staffing (Date Match) -->
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1188" y="900" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Visit Date" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Date" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Date" selected="False" input="Right_" />
+                <SelectField field="Right_Fast Track Beds" selected="False" rename="Right_Fast Track Beds" input="Right_" />
+                <SelectField field="Right_DummyJoin" selected="False" rename="Right_DummyJoin" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🔗 JOIN: + Staffing</n>
+          <DefaultAnnotationText>Add staffing levels by date
+Key: Visit Date = Staffing Date</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+
+    <!-- Filter: Match Visit Time to Shift Window -->
+    <Node ToolID="108">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1314" y="900" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[([ShiftStart] < [ShiftEnd] AND [Visit Time] >= [ShiftStart] AND [Visit Time] < [ShiftEnd])
+OR
+([ShiftStart] > [ShiftEnd] AND ([Visit Time] >= [ShiftStart] OR [Visit Time] < [ShiftEnd]))]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🎯 Match Shift Timing</n>
+          <DefaultAnnotationText>Filter to exact shift match
+Handles overnight shifts correctly</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+
+    <!-- Select: Final Field Organization -->
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1440" y="900" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Visit ID" selected="True" />
+            <SelectField field="Patient ID" selected="True" />
+            <SelectField field="Hospital ID" selected="True" />
+            <SelectField field="Facility Size (Beds)" selected="True" />
+            <SelectField field="ICU Beds" selected="True" />
+            <SelectField field="Regular Beds" selected="True" />
+            <SelectField field="Fast Track Beds" selected="True" />
+            <SelectField field="Right_Fast Track Beds" selected="True" />
+            <SelectField field="Arrival Time" selected="True" />
+            <SelectField field="Registration Start" selected="True" />
+            <SelectField field="Registration End" selected="True" />
+            <SelectField field="Triage Start" selected="True" />
+            <SelectField field="Triage End" selected="True" />
+            <SelectField field="Doctor Seen" selected="True" />
+            <SelectField field="Exit Time" selected="True" />
+            <SelectField field="Triage Level" selected="True" />
+            <SelectField field="Visit Date" selected="True" />
+            <SelectField field="Visit Time" selected="True" />
+            <SelectField field="WaitTime for Reg" selected="True" />
+            <SelectField field="Registration process time" selected="True" />
+            <SelectField field="Triage process time" selected="True" />
+            <SelectField field="Arrival To Exit" selected="False" />
+            <SelectField field="WaitTime after Triage" selected="True" />
+            <SelectField field="DoctorVisit to Exit" selected="True" />
+            <SelectField field="TriageDuration" selected="True" />
+            <SelectField field="TotalTime(Arrival To Exit)" selected="True" />
+            <SelectField field="Disposition" selected="True" />
+            <SelectField field="Patient Satisfaction" selected="True" rename="Satisfaction" />
+            <SelectField field="Age" selected="True" />
+            <SelectField field="Gender" selected="True" />
+            <SelectField field="Insurance" selected="True" />
+            <SelectField field="Staff Date" selected="True" />
+            <SelectField field="Shift" selected="True" />
+            <SelectField field="ShiftStart" selected="True" />
+            <SelectField field="ShiftEnd" selected="True" />
+            <SelectField field="Nurses On Duty" selected="True" />
+            <SelectField field="Doctors On Duty" selected="True" />
+            <SelectField field="Specialists On Call" selected="True" />
+            <SelectField field="Fast Tracks Beds on shift" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>✅ Final Field Selection</n>
+          <DefaultAnnotationText>Organize and rename for output
+Clean column order for analysis</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+
+    <!-- =============================================== -->
+    <!-- SECTION 5: ANALYTICS & AGGREGATIONS -->
+    <!-- =============================================== -->
+    
+    <!-- Analytics 1: Arrival Pattern Analysis -->
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="810" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Arrived At Shift" action="GroupBy" rename="Arrived At Shift" />
+            <SummarizeField field="Arrival Hour" action="GroupBy" rename="Arrival Hour" />
+            <SummarizeField field="Visit ID" action="Count" rename="Count Visit ID" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📊 Arrival Pattern Analysis</n>
+          <DefaultAnnotationText>Aggregate visit counts by hour and shift
+For traffic visualization</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+
+    <!-- Sort for Charting -->
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="936" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Arrival Hour" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📈 Sort for Visualization</n>
+          <DefaultAnnotationText>Order chronologically for chart</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+
+    <!-- Chart: Hourly Traffic -->
+    <Node ToolID="99">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="1062" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>scatter</type>
+              <mode>lines</mode>
+              <stackgroup>1</stackgroup>
+              <ysrc>Count Visit ID</ysrc>
+              <xsrc>Arrival Hour</xsrc>
+              <orientation>v</orientation>
+              <line>
+                <width>2</width>
+              </line>
+              <transforms json:Array="true">
+                <type>groupby</type>
+                <groupssrc>Arrived At Shift</groupssrc>
+                <enabled>true</enabled>
+              </transforms>
+            </Traces>
+            <Layout>
+              <title>
+                <text>Patient Arrivals by Hour and Shift</text>
+              </title>
+              <xaxis>
+                <title>
+                  <text>Arrival Hour</text>
+                </title>
+              </xaxis>
+              <yaxis>
+                <title>
+                  <text>Patient Count</text>
+                </title>
+              </yaxis>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📊 CHART: Hourly Traffic Pattern</n>
+          <DefaultAnnotationText>Interactive stacked area chart
+Shows arrival distribution by shift</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+
+    <!-- Analytics 2: Nurse Workload Analysis -->
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1566" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Visit Date" action="GroupBy" rename="Visit Date" />
+            <SummarizeField field="Shift" action="GroupBy" rename="Shift" />
+            <SummarizeField field="Nurses On Duty" action="GroupBy" rename="Nurses On Duty" />
+            <SummarizeField field="Visit ID" action="Count" rename="PatientCount" />
+            <SummarizeField field="Triage process time" action="Avg" rename="AvgTriageDuration" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📊 Nurse Workload Metrics</n>
+          <DefaultAnnotationText>Calculate patients per nurse
+Track triage efficiency</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+
+    <!-- Calculate Ratio -->
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1692" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[PatientCount] / [Nurses On Duty]" field="PatientsPerNurse" size="8" type="Int64" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📐 Calculate Patient-to-Nurse Ratio</n>
+          <DefaultAnnotationText>Key staffing efficiency metric</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+
+    <!-- Sort Output -->
+    <Node ToolID="124">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1818" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Visit Date" order="Ascending" />
+            <Field field="Shift" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📈 Sort Chronologically</n>
+          <DefaultAnnotationText>Order by date and shift</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+
+    <!-- Analytics 3: Doctor Traffic by Triage -->
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1566" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Visit Date" action="GroupBy" rename="Visit Date" />
+            <SummarizeField field="Shift" action="GroupBy" rename="Shift" />
+            <SummarizeField field="Doctors On Duty" action="GroupBy" rename="Doctors On Duty" />
+            <SummarizeField field="Specialists On Call" action="GroupBy" rename="Specialists On Call" />
+            <SummarizeField field="Triage Level" action="GroupBy" rename="Triage Level" />
+            <SummarizeField field="Visit ID" action="Count" rename="PatientCount" />
+            <SummarizeField field="WaitTime after Triage" action="Avg" rename="AvgWaitTime after Triage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📊 Doctor Workload by Triage</n>
+          <DefaultAnnotationText>Analyze wait times by:
+• Triage severity
+• Doctor availability
+• Shift patterns</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+
+    <!-- Sort for Heatmap -->
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1692" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Visit Date" order="Ascending" />
+            <Field field="Shift" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📈 Sort for Heatmap</n>
+          <DefaultAnnotationText>Prepare data for visualization</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+
+    <!-- Chart: Wait Time Heatmap -->
+    <Node ToolID="126">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="1818" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>heatmap</type>
+              <mode>lines</mode>
+              <autocolorscale>true</autocolorscale>
+              <xsrc>Shift</xsrc>
+              <ysrc>Triage Level</ysrc>
+              <zsrc>AvgWaitTime after Triage</zsrc>
+            </Traces>
+            <Layout>
+              <title>
+                <text>Wait Times: Triage Level vs Shift</text>
+              </title>
+              <xaxis>
+                <title>
+                  <text>Shift</text>
+                </title>
+              </xaxis>
+              <yaxis>
+                <title>
+                  <text>Triage Level</text>
+                </title>
+              </yaxis>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🔥 CHART: Wait Time Heatmap</n>
+          <DefaultAnnotationText>Identifies bottlenecks by
+triage level and shift</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+
+    <!-- Analytics 4: Average Staffing by Shift -->
+    <Node ToolID="134">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="684" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Shift" action="GroupBy" rename="Shift" />
+            <SummarizeField field="Nurses On Duty" action="Avg" rename="Avg_Nurses On Duty" />
+            <SummarizeField field="Doctors On Duty" action="Avg" rename="Avg_Doctors On Duty" />
+            <SummarizeField field="Specialists On Call" action="Avg" rename="Avg_Specialists On Call" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>📊 Average Staffing Levels</n>
+          <DefaultAnnotationText>Summary statistics by shift</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+
+    <!-- Round Values -->
+    <Node ToolID="136">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="810" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ABS([Avg_Nurses On Duty])" field="Avg. Nurses on Duty" size="1" type="Byte" enabled="true" />
+            <FormulaField expression="ABS([Avg_Doctors On Duty])" field="Avg. Doctors on Duty" size="1" type="Byte" enabled="true" />
+            <FormulaField expression="ABS([Avg_Specialists On Call])" field="Avg. Specialists on call" size="1" type="Byte" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>🔢 Clean Averages</n>
+          <DefaultAnnotationText>Round to whole numbers</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+
+    <!-- Final Select -->
+    <Node ToolID="139">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="936" y="1200" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Avg_Nurses On Duty" selected="False" />
+            <SelectField field="Avg_Doctors On Duty" selected="False" />
+            <SelectField field="Avg_Specialists On Call" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>✅ Remove Temp Fields</n>
+          <DefaultAnnotationText>Clean output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+
+    <!-- =============================================== -->
+    <!-- SECTION 6: DATA OUTPUTS -->
+    <!-- =============================================== -->
+    
+    <!-- Output: Master Dataset -->
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1566" y="900" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\dteja\Downloads\datathon\output files\final_data.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>💾 OUTPUT: Master Dataset</n>
+          <DefaultAnnotationText>final_data.csv
+Complete enriched visit records</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+
+    <!-- Output: Nurse Workload Report -->
+    <Node ToolID="130">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1944" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\dteja\Downloads\datathon\output files\patients per nurse.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>💾 OUTPUT: Nurse Workload</n>
+          <DefaultAnnotationText>patients_per_nurse.csv
+Staffing efficiency metrics</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+
+    <!-- Output: Doctor Traffic Report -->
+    <Node ToolID="131">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1944" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\dteja\Downloads\datathon\output files\doctor traffic.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <n>💾 OUTPUT: Doctor Traffic</n>
+          <DefaultAnnotationText>doctor_traffic.csv
+Wait time analysis by triage</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+
+  </Nodes>
+  <Connections>
+    <!-- Input Connections -->
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+
+    <!-- Visit Transform Pipeline -->
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="105" Connection="Input" />
+    </Connection>
+
+    <!-- Dimension Prep -->
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+
+    <!-- Join Chain -->
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="127" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="127" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="127" Connection="Join" />
+      <Destination ToolID="66" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="66" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Join" />
+      <Destination ToolID="68" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="68" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Join" />
+      <Destination ToolID="83" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="83" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Join" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="True" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+
+    <!-- Analytics Branches -->
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="134" Connection="Output" />
+      <Destination ToolID="136" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="136" Connection="Output" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Hospital Analytics - Enhanced Workflow</Name>
+      <Description>Professional hospital operations analytics workflow featuring:
+• Multi-source data integration (5 datasets)
+• Advanced datetime parsing and standardization
+• Comprehensive KPI calculations
+• Staffing efficiency analysis
+• Interactive visualizations
+• Quality data cleansing and validation</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName>Healthcare Analytics</CategoryName>
+      <SearchTags>hospital, healthcare, analytics, staffing, efficiency, wait times, patient flow</SearchTags>
+      <Author>Enhanced for Datathon Excellence</Author>
+      <Company>Meridian City Hospital</Company>
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description>Analyzes hospital visit patterns, staffing efficiency, and patient outcomes</Description>
+        <File />
+      </Example>
+      <WorkflowId value="f1449fda-b207-4b45-b02b-fdf9e99d2251" />
+      <Telemetry>
+        <PreviousWorkflowId value="d9a551ae-18f7-41d5-90c1-26a0b9eea61b" />
+        <OriginWorkflowId value="b8e1c5f4-981e-4c44-9026-ef35d221435e" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

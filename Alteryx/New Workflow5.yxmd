@@ -1,0 +1,2778 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="618" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Hospital_Patients.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Patient ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+            <Field name="Age" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+            <Field name="Insurance" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="678" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_b1c89924e49f47ae8b95907db45a6898~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="6" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Hospital_Visits.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Visit ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Patient ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Arrival Time" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Registration Start" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Registration End" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Triage Start" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Triage End" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Doctor Seen" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Exit Time" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Triage Level" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+            <Field name="Hospital ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Visits.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="126" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_d25648730ece4defbeac1ddb2121ab69~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="462" y="1338" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Hospital_Staffing_EAST_LOCATION.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Shift" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Nurses On Duty" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Doctors On Duty" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Specialists On Call" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+            <Field name="Fast Track Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Staffing_EAST_LOCATION.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="282" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Hospital_Facility.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Hospital ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Hospital Name" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Facility Size (Beds)" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="ICU Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Fast Track Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+            <Field name="Regular Beds" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="294" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_9ed0d15158bf43799aa1ed8b92656751~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Hospital_Outcomes.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Visit ID" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="V_String" />
+            <Field name="Disposition" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="V_String" />
+            <Field name="Patient Satisfaction" size="254" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="162" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_0f32c047b76f4e5a9b992a843646e82e~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="726" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Patient ID" selected="True" />
+            <Field field="Age" selected="True" />
+            <Field field="Gender" selected="True" />
+            <Field field="Insurance" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Patient ID" size="13" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="String" />
+            <Field name="Age" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="Byte" />
+            <Field name="Gender" size="6" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="String" />
+            <Field name="Insurance" size="10" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Patients.csv" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="810" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_01c85b153ce74669a3e41cf34f1dd8aa~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="870" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="True" />
+          <RemoveNullColumns value="True" />
+          <RemoveTabsLineBreaksAndDuplicates value="True" />
+          <RemoveLeadingAndTrailingWhitespace value="True" />
+          <RemoveAllWhitespaces value="True" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="Patient ID" selected="True" />
+            <Field value="Age" selected="True" />
+            <Field value="Gender" selected="True" />
+            <Field value="Insurance" selected="True" />
+            <Field value="*Unknown" selected="False" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="True" />
+          <Checkbox_ReplaceNumericColumns value="True" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="True" />
+          <ReplaceWithZero value="True" />
+          <CheckBox_ModifyCase value="True" />
+          <ModifyCase value="upper" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="954" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_cbf00968115d4e439218bc8f25eeb690~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1026" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Insurance] = &quot;MEDICAD&quot; THEN &quot;MEDICAID&quot;&#xA;ELSEIF [Insurance] = &quot;PRIVAT&quot; THEN &quot;PRIVATE&quot;&#xA;ELSEIF [Insurance] = &quot;MEDCARE&quot; THEN &quot;MEDICARE&quot;&#xA;ELSEIF [Insurance] = &quot;UNINSURRED&quot; THEN &quot;UNINSURED&quot;&#xA;ELSE [Insurance]&#xA;ENDIF" field="Insurance" size="10" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Insurance = IF [Insurance] = "MEDICAD" THEN "MEDICAID"
+ELSEIF [Insurance] = "PRI...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1062" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_288425b0998f4c61a150f01ec3369e5b~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="582" y="1338" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Date</InputFieldName>
+          <Language>English</Language>
+          <Format>MM-dd-yyyy</Format>
+          <OutputFieldName>Staff Date</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Date From:
+MM-dd-yyyy</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="690" y="1434" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_5d5710e9d6da4ae69e892aa742726e0b~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="726" y="1338" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="False" type="Date" size="10" />
+            <SelectField field="Staff Date" selected="True" />
+            <SelectField field="Shift" selected="True" type="String" size="10" />
+            <SelectField field="Nurses On Duty" selected="True" type="Int16" size="2" />
+            <SelectField field="Doctors On Duty" selected="True" type="Int16" size="2" />
+            <SelectField field="Specialists On Call" selected="True" type="Int16" size="2" />
+            <SelectField field="Fast Track Beds" selected="True" rename="Fast Tracks Beds on shift" type="Int16" size="2" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="834" y="1446" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_d47f5c10ce994ec594f6280d5abf6e67~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="858" y="1338" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="False" />
+          <RemoveNullColumns value="False" />
+          <RemoveTabsLineBreaksAndDuplicates value="False" />
+          <RemoveLeadingAndTrailingWhitespace value="True" />
+          <RemoveAllWhitespaces value="False" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="Staff Date" selected="True" />
+            <Field value="Shift" selected="True" />
+            <Field value="Nurses On Duty" selected="True" />
+            <Field value="Doctors On Duty" selected="True" />
+            <Field value="Specialists On Call" selected="True" />
+            <Field value="Fast Track Beds" selected="True" />
+            <Field value="*Unknown" selected="True" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="True" />
+          <Checkbox_ReplaceNumericColumns value="True" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="True" />
+          <ReplaceWithZero value="True" />
+          <CheckBox_ModifyCase value="True" />
+          <ModifyCase value="upper" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="906" y="1254" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_33452da5e815415b8b2cc47030d690ea~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="174" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Visit ID" selected="True" />
+            <Field field="Disposition" selected="True" />
+            <Field field="Patient Satisfaction" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Visit ID" size="7" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="String" />
+            <Field name="Disposition" size="11" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="String" />
+            <Field name="Patient Satisfaction" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Outcomes.csv" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="306" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="True" />
+          <RemoveNullColumns value="True" />
+          <RemoveTabsLineBreaksAndDuplicates value="False" />
+          <RemoveLeadingAndTrailingWhitespace value="True" />
+          <RemoveAllWhitespaces value="False" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="Visit ID" selected="True" />
+            <Field value="Disposition" selected="True" />
+            <Field value="Patient Satisfaction" selected="True" />
+            <Field value="*Unknown" selected="False" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="True" />
+          <Checkbox_ReplaceNumericColumns value="True" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="True" />
+          <ReplaceWithZero value="True" />
+          <CheckBox_ModifyCase value="True" />
+          <ModifyCase value="upper" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="270" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_2eaeb7dd8c984894a6837295d89c5349~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="378" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_4f3e7d9b80cd4bdbad4ba610957bb4d5~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="450" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Disposition] = &quot;DISCH&quot; THEN &quot;DISCHARGED&quot;&#xA;ELSEIF [Disposition] = &quot;ADM&quot; THEN &quot;ADMITTED&quot;&#xA;ELSEIF [Disposition] = &quot;TRANSFER&quot; THEN &quot;TRANSFERRED&quot;&#xA;ELSE [Disposition]&#xA;ENDIF" field="Disposition" size="11" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Disposition = IF [Disposition] = "DISCH" THEN "DISCHARGED"
+ELSEIF [Disposition] ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="534" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_eb36af4d355f452db8a4c9b590e34cb8~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="138" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Arrival Time" />
+            <Field name="Registration Start" />
+            <Field name="Registration End" />
+            <Field name="Triage Start" />
+            <Field name="Triage End" />
+            <Field name="Doctor Seen" />
+            <Field name="Exit Time" />
+            <Field name="Visit ID" selected="False" />
+            <Field name="Patient ID" selected="False" />
+            <Field name="Triage Level" selected="False" />
+            <Field name="Hospital ID" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>IF [_CurrentField_]="" THEN NULL() 
+ELSEIF Contains([_CurrentField_],"Jan") OR Contains([_CurrentField_],"Feb") OR Contains([_CurrentField_],"Mar") OR Contains([_CurrentField_],"Apr") OR Contains([_CurrentField_],"May") OR Contains([_CurrentField_],"Jun") OR Contains([_CurrentField_],"Jul") OR Contains([_CurrentField_],"Aug") OR Contains([_CurrentField_],"Sep") OR Contains([_CurrentField_],"Oct") OR Contains([_CurrentField_],"Nov") OR Contains([_CurrentField_],"Dec") THEN DateTimeParse([_CurrentField_],"%b %d %Y %H:%M") 
+ELSEIF Contains([_CurrentField_], "T") THEN
+    DateTimeParse([_CurrentField_], "%Y-%m-%dT%H:%M")
+ELSE DateTimeParse([_CurrentField_],"%m/%d/%Y %H:%M") ENDIF</Expression>
+          <ChangeFieldType value="True" />
+          <OutputFieldType type="DateTime" size="19" scale="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF [_CurrentField_]="" THEN NULL() 
+ELSEIF Contains([_Current...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="234" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_9c41d5924a7c4f7bb402909a8a0d1679~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="270" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Visit ID" selected="True" type="String" size="7" />
+            <SelectField field="Patient ID" selected="True" type="String" size="13" />
+            <SelectField field="Hospital ID" selected="True" type="String" size="10" />
+            <SelectField field="Arrival Time" selected="True" />
+            <SelectField field="Registration Start" selected="True" />
+            <SelectField field="Registration End" selected="True" />
+            <SelectField field="Triage Start" selected="True" />
+            <SelectField field="Triage End" selected="True" />
+            <SelectField field="Doctor Seen" selected="True" />
+            <SelectField field="Exit Time" selected="True" />
+            <SelectField field="Triage Level" selected="True" type="String" size="15" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="390" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Hospital ID" selected="True" />
+            <Field field="Hospital Name" selected="True" />
+            <Field field="Facility Size (Beds)" selected="True" />
+            <Field field="ICU Beds" selected="True" />
+            <Field field="Fast Track Beds" selected="True" />
+            <Field field="Regular Beds" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Hospital ID" size="10" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="String" />
+            <Field name="Hospital Name" size="21" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="String" />
+            <Field name="Facility Size (Beds)" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+            <Field name="ICU Beds" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+            <Field name="Fast Track Beds" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+            <Field name="Regular Beds" source="File: C:\Users\dteja\Downloads\datathon\Meridian_City_Hospital_Data\Hospital_Facility.csv" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="522" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_9e10517f4ada4ae797eec1cbbc8a67e9~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="366" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_573e09c8be2544bcb5f0ddd49f5ff28a~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="402" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Triage Level" />
+            <Field name="Visit ID" selected="False" />
+            <Field name="Patient ID" selected="False" />
+            <Field name="Hospital ID" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression><![CDATA[IF Contains(LowerCase([Triage Level]), "critical") OR [Triage Level] = "resuscitation" THEN
+    "1"
+ELSEIF Contains(LowerCase([Triage Level]), "emergent") OR [Triage Level] = "high" THEN
+    "2"
+ELSEIF Contains(LowerCase([Triage Level]), "urgent") OR [Triage Level] = "moderate" THEN
+    "3"
+ELSEIF Contains(LowerCase([Triage Level]), "nonurgent") OR [Triage Level] = "low" THEN
+    "4"
+ELSE
+    [Triage Level]
+ENDIF
+]]></Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF Contains(LowerCase([Triage Level]), "critical") OR [Triage...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="474" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_935a3ec33dca42d39a52a7be7bae043c~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="546" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeDiff([Exit Time], [Arrival Time], &quot;minutes&quot;)&#xA;" field="TotalTime(Arrival To Exit)" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="IF ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &gt;= 7 &#xA;       AND ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &lt; 15 THEN        &quot;DAY&quot;&#xA;ELSEIF ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &gt;= 15 &#xA;       AND ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;)) &lt; 23 THEN        &quot;EVENING&quot;&#xA;ELSE        &quot;NIGHT&quot;&#xA;ENDIF" field="Arrived At Shift" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="ToNumber(DateTimeFormat([Arrival Time], &quot;%H&quot;))" field="Arrival Hour" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Doctor Seen], [Triage End] , &quot;minutes&quot;)&#xA;" field="WaitTime after Triage" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Exit Time], [Doctor Seen] , &quot;minutes&quot;)" field="DoctorVisit to Exit" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Registration End] , [Registration Start], &quot;minutes&quot;)&#xA;" field="Registration process time" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Triage End], [Triage Start], &quot;minutes&quot;)&#xA;" field="Triage process time" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="DateTimeDiff([Registration Start], [Arrival Time], &quot;minutes&quot;)&#xA;" field="WaitTime for Reg" size="2" type="Int16" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TotalTime(Arrival To Exit) = DateTimeDiff([Exit Time], [Arrival Time], "minutes"...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="630" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_79a6368e7bcc4b84ae6f3a790d969c79~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="918" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Visit ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Visit ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Visit ID" selected="True" input="Left_" />
+                <SelectField field="Left_Patient ID" selected="True" input="Left_" />
+                <SelectField field="Left_Hospital ID" selected="True" input="Left_" />
+                <SelectField field="Left_Arrival Time" selected="True" input="Left_" />
+                <SelectField field="Left_Registration Start" selected="True" input="Left_" />
+                <SelectField field="Left_Registration End" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Start" selected="True" input="Left_" />
+                <SelectField field="Left_Triage End" selected="True" input="Left_" />
+                <SelectField field="Left_Doctor Seen" selected="True" input="Left_" />
+                <SelectField field="Left_Exit Time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Level" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Date" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime for Reg" selected="True" input="Left_" />
+                <SelectField field="Left_Registration process time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage process time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime after Triage" selected="True" input="Left_" />
+                <SelectField field="Left_DoctorVisit to Exit" selected="True" input="Left_" />
+                <SelectField field="Left_TotalTime(Arrival To Exit)" selected="True" input="Left_" />
+                <SelectField field="Left_Facility Size (Beds)" selected="True" input="Left_" />
+                <SelectField field="Left_ICU Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Fast Track Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Regular Beds" selected="True" input="Left_" />
+                <SelectField field="Right_Visit ID" selected="False" rename="Right_Visit ID" input="Right_" />
+                <SelectField field="Right_Disposition" selected="True" input="Right_" />
+                <SelectField field="Right_Patient Satisfaction" selected="True" input="Right_" />
+                <SelectField field="Left_Arrival To Exit" selected="True" input="Left_" />
+                <SelectField field="Left_Arrived At Shift" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1038" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_1574c0b3f8f34c1ca8dd92f7728828c2~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1230" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Patient ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Patient ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Visit ID" selected="True" input="Left_" />
+                <SelectField field="Left_Patient ID" selected="True" input="Left_" />
+                <SelectField field="Left_Hospital ID" selected="True" input="Left_" />
+                <SelectField field="Left_Arrival Time" selected="True" input="Left_" />
+                <SelectField field="Left_Registration Start" selected="True" input="Left_" />
+                <SelectField field="Left_Registration End" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Start" selected="True" input="Left_" />
+                <SelectField field="Left_Triage End" selected="True" input="Left_" />
+                <SelectField field="Left_Doctor Seen" selected="True" input="Left_" />
+                <SelectField field="Left_Exit Time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Level" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Date" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime for Reg" selected="True" input="Left_" />
+                <SelectField field="Left_Registration process time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage process time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime after Triage" selected="True" input="Left_" />
+                <SelectField field="Left_DoctorVisit to Exit" selected="True" input="Left_" />
+                <SelectField field="Left_TotalTime(Arrival To Exit)" selected="True" input="Left_" />
+                <SelectField field="Left_Facility Size (Beds)" selected="True" input="Left_" />
+                <SelectField field="Left_ICU Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Fast Track Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Regular Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Disposition" selected="True" input="Left_" />
+                <SelectField field="Left_Patient Satisfaction" selected="True" input="Left_" />
+                <SelectField field="Right_Patient ID" selected="False" rename="Right_Patient ID" input="Right_" />
+                <SelectField field="Right_Age" selected="True" input="Right_" />
+                <SelectField field="Right_Gender" selected="True" input="Right_" />
+                <SelectField field="Right_Insurance" selected="True" input="Right_" />
+                <SelectField field="Left_Arrival To Exit" selected="True" input="Left_" />
+                <SelectField field="Left_Arrived At Shift" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1422" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_20453e4c005c4e74b8debf24507bb371~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2046" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\dteja\Downloads\datathon\output files\final_data.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>final_data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="882" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Arrived At Shift" action="GroupBy" rename="Arrived At Shift" />
+            <SummarizeField field="Arrival Hour" action="GroupBy" rename="Arrival Hour" />
+            <SummarizeField field="Visit ID" action="Count" rename="Count Visit ID" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1002" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_67045d7149bb4d548565939dc8047273~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1074" y="1242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_72856e2086a14f51a7b787c0fd3f0c5e~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1494" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Visit Date" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Date" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Visit ID" selected="True" input="Left_" />
+                <SelectField field="Left_Patient ID" selected="True" input="Left_" />
+                <SelectField field="Left_Hospital ID" selected="True" input="Left_" />
+                <SelectField field="Left_Facility Size (Beds)" selected="True" input="Left_" />
+                <SelectField field="Left_ICU Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Fast Track Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Regular Beds" selected="True" input="Left_" />
+                <SelectField field="Left_Arrival Time" selected="True" input="Left_" />
+                <SelectField field="Left_Registration Start" selected="True" input="Left_" />
+                <SelectField field="Left_Registration End" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Start" selected="True" input="Left_" />
+                <SelectField field="Left_Triage End" selected="True" input="Left_" />
+                <SelectField field="Left_Doctor Seen" selected="True" input="Left_" />
+                <SelectField field="Left_Exit Time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Level" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Date" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Time" selected="True" input="Left_" />
+                <SelectField field="Left_Registration process time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage process time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime after Triage" selected="True" input="Left_" />
+                <SelectField field="Left_DoctorVisit to Exit" selected="True" input="Left_" />
+                <SelectField field="Left_TotalTime(Arrival To Exit)" selected="True" input="Left_" />
+                <SelectField field="Left_Disposition" selected="True" input="Left_" />
+                <SelectField field="Left_Patient Satisfaction" selected="True" input="Left_" />
+                <SelectField field="Left_Age" selected="True" input="Left_" />
+                <SelectField field="Left_Gender" selected="True" input="Left_" />
+                <SelectField field="Left_Insurance" selected="True" input="Left_" />
+                <SelectField field="Right_Staff Date" selected="True" input="Right_" />
+                <SelectField field="Right_Shift" selected="True" input="Right_" />
+                <SelectField field="Right_Nurses On Duty" selected="True" input="Right_" />
+                <SelectField field="Right_Doctors On Duty" selected="True" input="Right_" />
+                <SelectField field="Right_Specialists On Call" selected="True" input="Right_" />
+                <SelectField field="Right_Fast Track Beds" selected="False" rename="Right_Fast Track Beds" input="Right_" />
+                <SelectField field="Right_Date" selected="False" input="Right_" />
+                <SelectField field="Right_ShiftStart" selected="True" input="Right_" />
+                <SelectField field="Right_ShiftEnd" selected="True" input="Right_" />
+                <SelectField field="Left_Arrival To Exit" selected="True" input="Left_" />
+                <SelectField field="Right_Shift End" selected="True" input="Right_" />
+                <SelectField field="Right_Shift Start" selected="True" input="Right_" />
+                <SelectField field="Right_DummyJoin" selected="False" rename="Right_DummyJoin" input="Right_" />
+                <SelectField field="Right_Fast Tracks Beds on shift" selected="True" input="Right_" />
+                <SelectField field="Left_WaitTime for Reg" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="1086" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>scatter</type>
+              <mode>lines</mode>
+              <stackgroup>1</stackgroup>
+              <ysrc>Count Visit ID</ysrc>
+              <xsrc>Arrival Hour</xsrc>
+              <orientation>v</orientation>
+              <line>
+                <width>2</width>
+              </line>
+              <transforms json:Array="true">
+                <type>groupby</type>
+                <groupssrc>Arrived At Shift</groupssrc>
+                <styles>
+                  <target>DAY</target>
+                  <value>
+                    <line>
+                      <width>2</width>
+                    </line>
+                    <mode>lines</mode>
+                    <marker>
+                      <size>6</size>
+                      <line>
+                        <width>0</width>
+                      </line>
+                    </marker>
+                    <hoverinfo>x+y</hoverinfo>
+                  </value>
+                </styles>
+                <styles>
+                  <target>NIGHT</target>
+                  <value>
+                    <line>
+                      <width>2</width>
+                    </line>
+                    <mode>none</mode>
+                    <marker>
+                      <size>6</size>
+                      <line>
+                        <width>0</width>
+                      </line>
+                    </marker>
+                    <fill>tozeroy</fill>
+                    <hoverinfo>x+y</hoverinfo>
+                  </value>
+                </styles>
+                <styles>
+                  <target>EVENING</target>
+                  <value>
+                    <line>
+                      <width>2</width>
+                    </line>
+                  </value>
+                </styles>
+                <groups>NIGHT</groups>
+                <groups>NIGHT</groups>
+                <groups>NIGHT</groups>
+                <groups>NIGHT</groups>
+                <groups>NIGHT</groups>
+                <groups>NIGHT</groups>
+                <groups>NIGHT</groups>
+                <groups>DAY</groups>
+                <groups>DAY</groups>
+                <groups>DAY</groups>
+                <groups>DAY</groups>
+                <groups>DAY</groups>
+                <groups>DAY</groups>
+                <groups>DAY</groups>
+                <groups>DAY</groups>
+                <groups>EVENING</groups>
+                <groups>EVENING</groups>
+                <groups>EVENING</groups>
+                <groups>EVENING</groups>
+                <groups>EVENING</groups>
+                <groups>EVENING</groups>
+                <groups>EVENING</groups>
+                <groups>EVENING</groups>
+                <groups>NIGHT</groups>
+                <enabled>true</enabled>
+              </transforms>
+            </Traces>
+            <Layout>
+              <title>
+                <text>
+                </text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+                <size>12</size>
+              </font>
+              <autosize>false</autosize>
+              <width>700</width>
+              <height>849</height>
+              <showlegend>true</showlegend>
+              <hovermode>closest</hovermode>
+              <xaxis>
+                <range>23</range>
+                <range>0</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Arrival Hour</text>
+                </title>
+                <type>linear</type>
+                <tickfont>
+                  <size>12</size>
+                </tickfont>
+                <nticks>0</nticks>
+              </xaxis>
+              <yaxis>
+                <range>0</range>
+                <range>1891.578947368421</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Count Visit ID</text>
+                </title>
+                <type>linear</type>
+              </yaxis>
+              <legend>
+                <font>
+                  <size>12</size>
+                </font>
+                <borderwidth>0</borderwidth>
+              </legend>
+              <margin>
+                <pad>0</pad>
+                <t>100</t>
+                <b>80</b>
+                <l>80</l>
+                <r>80</r>
+              </margin>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="104">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1578" y="942" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_86f50941e1014262b7acb5bcf0d2d13a~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="105">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeFormat([Arrival Time], &quot;%m/%d/%Y&quot;)" field="Visit Date" size="64" type="String" />
+            <FormulaField expression="DateTimeFormat([Arrival Time], &quot;%H:%M:%S&quot;)" field="Visit Time" size="8" type="Time" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Visit Date = DateTimeFormat([Arrival Time], "%m/%d/%Y")
+Visit Time = DateTimeFor...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="106">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="750" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_bfd8ba34ad5d45308b17d9fdc9abe3af~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="107">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="990" y="1338" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeFormat([Staff Date], &quot;%m/%d/%Y&quot;)" field="Date" size="64" type="String" enabled="true" />
+            <FormulaField expression="IF [Shift] = &quot;DAY&quot; THEN &quot;07:00:00&quot;&#xA;ELSEIF [Shift] = &quot;EVENING&quot; THEN &quot;15:00:00&quot;&#xA;ELSE  &quot;23:00:00&quot;&#xA;ENDIF" field="ShiftStart" size="8" type="Time" enabled="true" />
+            <FormulaField expression="IF [Shift] = &quot;DAY&quot; THEN &quot;14:59:59&quot;&#xA;ELSEIF [Shift] = &quot;EVENING&quot; THEN &quot;22:59:59&quot;&#xA;ELSE  &quot;06:59:59&quot;&#xA;ENDIF" field="ShiftEnd" size="8" type="Time" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Date = DateTimeFormat([Staff Date], "%m/%d/%Y")
+ShiftStart = IF [Shift] = "DAY" ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="108">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1614" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[([ShiftStart] < [ShiftEnd] AND 
+[Visit Time] >= [ShiftStart] AND 
+[Visit Time] < [ShiftEnd])
+OR
+([ShiftStart] > [ShiftEnd] 
+AND ([Visit Time] >= [ShiftStart] 
+OR [Visit Time] < [ShiftEnd]))
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>([ShiftStart] &lt; [ShiftEnd] AND 
+[Visit Time] &gt;= [ShiftStart] AND 
+[Visit Time] &lt;...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="109">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1698" y="942" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_3a149e86770f4199a98fc6249e7f9328~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2166" y="1098" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Visit Date" action="GroupBy" rename="Visit Date" />
+            <SummarizeField field="Shift" action="GroupBy" rename="Shift" />
+            <SummarizeField field="Nurses On Duty" action="GroupBy" rename="Nurses On Duty" />
+            <SummarizeField field="Visit ID" action="Count" rename="PatientCount" />
+            <SummarizeField field="Triage process time" action="Avg" rename="TriageDuration	Average	AvgTriageDuration" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="111">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2310" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_87cc998e285f450b9d479f058c6b96d0~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2298" y="1122" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[PatientCount] / [Nurses On Duty]&#xA;" field="PatientsPerNurse" size="8" type="Int64" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[PatientsPerNurse = [PatientCount] / [Nurses On Duty]
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="116">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1902" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_19299ed0752144729e156bb8035fa9d2~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="119">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2490" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_71839df8bf734d76a3464b5819ab275b~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2058" y="1326" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Visit Date" action="GroupBy" rename="Visit Date" />
+            <SummarizeField field="Shift" action="GroupBy" rename="Shift" />
+            <SummarizeField field="Doctors On Duty" action="GroupBy" rename="Doctors On Duty" />
+            <SummarizeField field="Specialists On Call" action="GroupBy" rename="Specialists On Call" />
+            <SummarizeField field="Triage Level" action="GroupBy" rename="Triage Level" />
+            <SummarizeField field="Visit ID" action="Count" rename="PatientCount" />
+            <SummarizeField field="WaitTime after Triage" action="Avg" rename="AvgWaitTime after Triage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2274" y="1278" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_7caedb168ac04f9c84360f2bd8612e86~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="2178" y="1338" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Visit Date" order="Ascending" />
+            <Field field="Shift" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Visit Date - Ascending
+Shift - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="124">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="2394" y="1122" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Visit Date" order="Ascending" />
+            <Field field="Shift" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Visit Date - Ascending
+Shift - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="126">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="2322" y="1410" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>heatmap</type>
+              <mode>lines</mode>
+              <autocolorscale>true</autocolorscale>
+              <xsrc>Shift</xsrc>
+              <ysrc>Triage Level</ysrc>
+              <zsrc>AvgWaitTime after Triage</zsrc>
+            </Traces>
+            <Layout>
+              <title>
+                <text>
+                </text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+              </font>
+              <autosize>false</autosize>
+              <width>700</width>
+              <height>849</height>
+              <showlegend>true</showlegend>
+              <hovermode>closest</hovermode>
+              <xaxis>
+                <range>-0.5</range>
+                <range>0.5</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Shift</text>
+                </title>
+                <type>category</type>
+              </xaxis>
+              <yaxis>
+                <range>-0.5</range>
+                <range>1043.5</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Triage Level</text>
+                </title>
+                <type>category</type>
+              </yaxis>
+              <legend>
+                <font>
+                  <size>12</size>
+                </font>
+                <borderwidth>0</borderwidth>
+              </legend>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="870" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Hospital ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Hospital ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Visit ID" selected="True" input="Left_" />
+                <SelectField field="Left_Patient ID" selected="True" input="Left_" />
+                <SelectField field="Left_Hospital ID" selected="True" input="Left_" />
+                <SelectField field="Left_Arrival Time" selected="True" input="Left_" />
+                <SelectField field="Left_Registration Start" selected="True" input="Left_" />
+                <SelectField field="Left_Registration End" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Start" selected="True" input="Left_" />
+                <SelectField field="Left_Triage End" selected="True" input="Left_" />
+                <SelectField field="Left_Doctor Seen" selected="True" input="Left_" />
+                <SelectField field="Left_Exit Time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage Level" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Date" selected="True" input="Left_" />
+                <SelectField field="Left_Visit Time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime for Reg" selected="True" input="Left_" />
+                <SelectField field="Left_Registration process time" selected="True" input="Left_" />
+                <SelectField field="Left_Triage process time" selected="True" input="Left_" />
+                <SelectField field="Left_WaitTime after Triage" selected="True" input="Left_" />
+                <SelectField field="Left_DoctorVisit to Exit" selected="True" input="Left_" />
+                <SelectField field="Left_TotalTime(Arrival To Exit)" selected="True" input="Left_" />
+                <SelectField field="Left_Arrival To Exit" selected="True" input="Left_" />
+                <SelectField field="Left_Arrived At Shift" selected="False" input="Left_" />
+                <SelectField field="Left_Arrival Hour" selected="False" input="Left_" />
+                <SelectField field="Right_Hospital ID" selected="False" rename="Right_Hospital ID" input="Right_" />
+                <SelectField field="Right_Hospital Name" selected="False" input="Right_" />
+                <SelectField field="Right_Facility Size (Beds)" selected="True" input="Right_" />
+                <SelectField field="Right_ICU Beds" selected="True" input="Right_" />
+                <SelectField field="Right_Fast Track Beds" selected="True" input="Right_" />
+                <SelectField field="Right_Regular Beds" selected="True" input="Right_" />
+                <SelectField field="Left_Hospital Name" selected="False" input="Left_" />
+                <SelectField field="Left_ICU Beds" selected="False" input="Left_" />
+                <SelectField field="Left_Regular Beds" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="990" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_9cd3d97f189c4dfda366845ba333f2f4~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1842" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Visit ID" selected="True" />
+            <SelectField field="Patient ID" selected="True" />
+            <SelectField field="Hospital ID" selected="True" />
+            <SelectField field="Facility Size (Beds)" selected="True" />
+            <SelectField field="ICU Beds" selected="True" />
+            <SelectField field="Regular Beds" selected="True" />
+            <SelectField field="Fast Track Beds" selected="True" />
+            <SelectField field="Right_Fast Track Beds" selected="True" />
+            <SelectField field="Arrival Time" selected="True" />
+            <SelectField field="Registration Start" selected="True" />
+            <SelectField field="Registration End" selected="True" />
+            <SelectField field="Triage Start" selected="True" />
+            <SelectField field="Triage End" selected="True" />
+            <SelectField field="Doctor Seen" selected="True" />
+            <SelectField field="Exit Time" selected="True" />
+            <SelectField field="Triage Level" selected="True" />
+            <SelectField field="Visit Date" selected="True" />
+            <SelectField field="Visit Time" selected="True" />
+            <SelectField field="WaitTime for Reg" selected="True" />
+            <SelectField field="Registration process time" selected="True" />
+            <SelectField field="Triage process time" selected="True" />
+            <SelectField field="Arrival To Exit" selected="False" />
+            <SelectField field="WaitTime after Triage" selected="True" />
+            <SelectField field="DoctorVisit to Exit" selected="True" />
+            <SelectField field="TriageDuration" selected="True" />
+            <SelectField field="TotalTime(Arrival To Exit)" selected="True" />
+            <SelectField field="Disposition" selected="True" />
+            <SelectField field="Patient Satisfaction" selected="True" rename="Satisfaction" />
+            <SelectField field="Age" selected="True" />
+            <SelectField field="Gender" selected="True" />
+            <SelectField field="Insurance" selected="True" />
+            <SelectField field="Staff Date" selected="True" />
+            <SelectField field="Shift" selected="True" />
+            <SelectField field="ShiftStart" selected="True" />
+            <SelectField field="ShiftEnd" selected="True" />
+            <SelectField field="Nurses On Duty" selected="True" />
+            <SelectField field="Doctors On Duty" selected="True" />
+            <SelectField field="Specialists On Call" selected="True" />
+            <SelectField field="Fast Tracks Beds on shift" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="130">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2526" y="1134" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\dteja\Downloads\datathon\output files\patients per nurse.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>patients per nurse.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="131">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2418" y="1338" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\dteja\Downloads\datathon\output files\doctor traffic.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>doctor traffic.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="978" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Arrival Hour" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Arrival Hour - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="134">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1170" y="1398" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Shift" action="GroupBy" rename="Shift" />
+            <SummarizeField field="Nurses On Duty" action="Avg" rename="Avg_Nurses On Duty" />
+            <SummarizeField field="Doctors On Duty" action="Avg" rename="Avg_Doctors On Duty" />
+            <SummarizeField field="Specialists On Call" action="Avg" rename="Avg_Specialists On Call" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="135">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1518" y="1326" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_6c8c7e7e08b94f84abb2886949bab29a~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="136">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1302" y="1398" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ABS([Avg_Nurses On Duty])" field="Avg. Nurses on Duty" size="1" type="Byte" enabled="true" />
+            <FormulaField expression="abs([Avg_Doctors On Duty])" field="Avg. Doctors on Duty" size="1" type="Byte" enabled="true" />
+            <FormulaField expression="ABS([Avg_Specialists On Call])" field="Avg. Specialists on call" size="1" type="Byte" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Avg. Nurses on Duty = ABS([Avg_Nurses On Duty])
+Avg. Doctors on Duty = abs([Avg_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1242" y="1326" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dteja\AppData\Local\Temp\Alteryx\Engine_46556_17b60c9e5da44fe686215b1412f92592_\Engine_46556_bb81b1f99dc74e54bb6aa91a0737629e~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="139">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1398" y="1398" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Avg_Nurses On Duty" selected="False" />
+            <SelectField field="Avg_Doctors On Duty" selected="False" />
+            <SelectField field="Avg_Specialists On Call" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="68" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Join" />
+      <Destination ToolID="68" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="66" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="127" Connection="Join" />
+      <Destination ToolID="66" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="127" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="127" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="105" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Join" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Join" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Join" />
+      <Destination ToolID="83" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="83" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Join" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Join" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="True" />
+      <Destination ToolID="109" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="True" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="127" Connection="Join" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="116" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="134" Connection="Output" />
+      <Destination ToolID="136" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="134" Connection="Output" />
+      <Destination ToolID="138" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="136" Connection="Output" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="139" Connection="Output" />
+      <Destination ToolID="135" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow5</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="f1449fda-b207-4b45-b02b-fdf9e99d2251" />
+      <Telemetry>
+        <PreviousWorkflowId value="d9a551ae-18f7-41d5-90c1-26a0b9eea61b" />
+        <OriginWorkflowId value="b8e1c5f4-981e-4c44-9026-ef35d221435e" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
