@@ -179,11 +179,11 @@ Why does this happen?
 
 ### 4. **Average Idle Doctors**
 - Mean number of available doctors during bottleneck periods
-- **Found: 2.8 doctors on average**
+- **Found: 1.8 doctors on average** *(with 10-minute buffer)*
 
 ### 5. **Staff Utilization Rate**
 - `Active Doctors / Doctors On Duty` during bottlenecks
-- **Found: ~50-60% (Target: 75-80%)**
+- **Found: ~50% (Target: 75-80%)**
 
 ---
 
@@ -233,13 +233,13 @@ Triage Level: 3
 **Current State:**
 - 15,000 visits in 90 days
 - 167 patients/day average
-- 2,240 bottleneck events
-- 1,423 wasted patient-hours
+- 2,179 bottleneck events (with 10-min buffer)
+- 1,387 wasted patient-hours
 
 **Optimized State:**
 - Same 15,000 visits process faster
 - Free up capacity for MORE patients
-- Recover 1,423 hours = capacity for ~1,423 more quick visits
+- Recover 1,387 hours = capacity for ~1,387 more quick visits
 - **+25% throughput potential**
 
 ### Math:
