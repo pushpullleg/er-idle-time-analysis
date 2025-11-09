@@ -5,6 +5,77 @@
     <!-- SECTION 1: DATA INPUT LAYER -->
     <!-- =============================================== -->
     
+    <!-- Workflow Summary & Governance -->
+    <Node ToolID="200">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="24" y="24" width="560" height="220" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>DATATHON SUBMISSION: ER PERFORMANCE COMMAND CENTER&#xA;&#xA;Purpose: Deliver end-to-end visibility into Meridian City Hospital emergency throughput for judge review.&#xA;Data Inputs:&#xA;- Hospital_Visits.csv (ER event timeline)&#xA;- Hospital_Patients.csv (demographics &amp; coverage)&#xA;- Hospital_Facility.csv (capacity context)&#xA;- Hospital_Outcomes.csv (disposition &amp; satisfaction)&#xA;- Hospital_Staffing_EAST_LOCATION.csv (shift staffing)&#xA;Outputs:&#xA;- final_data.csv (analysis-ready master table)&#xA;- patients_per_nurse.csv (staffing KPI rollup)&#xA;- doctor_traffic.csv (wait-time heatmap feed)&#xA;Key Assumptions &amp; Controls:&#xA;- Source timestamps are local facility time&#xA;- Multi-format parser standardizes all datetime fields&#xA;- Data cleanse steps remove null IDs and fix typos&#xA;- Overnight shifts handled via inclusive filter logic</Text>
+          <Font name="Segoe UI" size="10" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+
+    <!-- Section 1 Container: Data Inputs -->
+    <Node ToolID="201">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="12" y="252" width="330" height="1080" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SECTION 1 · DATA INGEST &amp; SOURCE CONTROLS</Caption>
+          <Style TextColor="#1b3a4b" FillColor="#e6f2f8" BorderColor="#1b3a4b" Transparency="20" Margin="30" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <ChildNode ToolID="2" />
+        <ChildNode ToolID="4" />
+        <ChildNode ToolID="8" />
+        <ChildNode ToolID="10" />
+        <ChildNode ToolID="6" />
+      </ChildNodes>
+    </Node>
+
+    <!-- Input Documentation Comment -->
+    <Node ToolID="212">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="18" y="216" width="306" height="120" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>INPUT INVENTORY &amp; REFRESH&#xA;- CSV extracts delivered from Meridian data room (timestamped nightly 02:00).&#xA;- Paths stored as relative for portability; override via Gallery when promoted.&#xA;- Browse tools removed post-validation to keep canvas clean.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+
     <!-- Input: Patient Demographics -->
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
@@ -45,7 +116,7 @@ Input: Patient master data with demographics</DefaultAnnotationText>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
     
-    <!-- Input: Hospital Visits (Main Fact Table) -->
+  <!-- Input: Hospital Visits (Main Fact Table) -->
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
         <Position x="54" y="300" />
@@ -173,7 +244,7 @@ Disposition and satisfaction scores</DefaultAnnotationText>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
     
-    <!-- Input: Staffing Data -->
+  <!-- Input: Staffing Data -->
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
         <Position x="54" y="1200" />
@@ -219,6 +290,55 @@ Resource allocation by shift</DefaultAnnotationText>
     <!-- SECTION 2: VISITS DATA TRANSFORMATION PIPELINE -->
     <!-- =============================================== -->
     
+    <!-- Section 2 Container: Visits Transformation -->
+    <Node ToolID="202">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="150" y="228" width="660" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SECTION 2 · VISIT TIMELINE STANDARDIZATION</Caption>
+          <Style TextColor="#2f3e46" FillColor="#edf6f9" BorderColor="#2f3e46" Transparency="20" Margin="24" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <ChildNode ToolID="48" />
+        <ChildNode ToolID="50" />
+        <ChildNode ToolID="54" />
+        <ChildNode ToolID="56" />
+        <ChildNode ToolID="105" />
+      </ChildNodes>
+    </Node>
+
+    <!-- Visit Timeline Comment -->
+    <Node ToolID="211">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="162" y="192" width="612" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>VISIT TIMELINE LOGIC&#xA;- Multi-field formula parses ISO, US, and Month-Name datetime formats, returning NULL when blanks appear.&#xA;- KPI formulas compute wait durations for each care stage plus shift classification and arrival hour for downstream aggregations.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+
     <!-- DateTime Parsing: Handle Multiple Formats -->
     <Node ToolID="48">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
@@ -384,6 +504,61 @@ For join and aggregation purposes</DefaultAnnotationText>
 
     <!-- =============================================== -->
     <!-- SECTION 3: DIMENSION TABLES PREP -->
+
+    <!-- Section 3 Container: Dimension Prep -->
+    <Node ToolID="203">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="150" y="540" width="660" height="576" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SECTION 3 · DIMENSION CURATION &amp; DATA QUALITY</Caption>
+          <Style TextColor="#3a2f4b" FillColor="#f1eaf6" BorderColor="#3a2f4b" Transparency="20" Margin="24" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <ChildNode ToolID="51" />
+        <ChildNode ToolID="37" />
+        <ChildNode ToolID="38" />
+        <ChildNode ToolID="41" />
+        <ChildNode ToolID="12" />
+        <ChildNode ToolID="14" />
+        <ChildNode ToolID="20" />
+        <ChildNode ToolID="30" />
+        <ChildNode ToolID="32" />
+        <ChildNode ToolID="34" />
+        <ChildNode ToolID="107" />
+      </ChildNodes>
+    </Node>
+
+    <!-- Data Quality Comment -->
+    <Node ToolID="208">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="156" y="504" width="630" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>DATA QUALITY PLAYBOOK&#xA;- Auto Field tools enforce numeric types for capacity, satisfaction, and age.&#xA;- Data Cleanse tools drop null Visit/Patient IDs and uppercase categorical codes.&#xA;- Formula steps expand abbreviations (Disposition, Insurance) for judge-friendly outputs.&#xA;- During development a 1,000-row limit was used on inputs; removed for final submission.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
     <!-- =============================================== -->
     
     <!-- Facility: Auto Field -->
@@ -767,6 +942,56 @@ NIGHT: 23:00-06:59</DefaultAnnotationText>
 
     <!-- =============================================== -->
     <!-- SECTION 4: DATA INTEGRATION LAYER -->
+
+    <!-- Section 4 Container: Integration Layer -->
+    <Node ToolID="204">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="780" y="420" width="708" height="540" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SECTION 4 · RELATIONAL JOINS &amp; SHIFT ALIGNMENT</Caption>
+          <Style TextColor="#2d4057" FillColor="#e8f0ff" BorderColor="#2d4057" Transparency="18" Margin="24" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <ChildNode ToolID="127" />
+        <ChildNode ToolID="66" />
+        <ChildNode ToolID="68" />
+        <ChildNode ToolID="83" />
+        <ChildNode ToolID="108" />
+        <ChildNode ToolID="129" />
+      </ChildNodes>
+    </Node>
+
+    <!-- Join Strategy Comment -->
+    <Node ToolID="209">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="792" y="384" width="660" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>JOIN STRATEGY &amp; EDGE CASES&#xA;- Visits ↔ Facility: Left join ensures all ER encounters retained even if capacity metadata missing.&#xA;- Outcomes ↔ Patient ↔ Staffing: Sequential inner joins keep only records with complete dispositions and demographics for fair comparisons.&#xA;- Filter tool aligns visit time with staffing shift, handling overnight windows via OR logic across midnight.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
     <!-- =============================================== -->
     
     <!-- Join: Visits + Facility -->
@@ -1020,6 +1245,62 @@ Clean column order for analysis</DefaultAnnotationText>
 
     <!-- =============================================== -->
     <!-- SECTION 5: ANALYTICS & AGGREGATIONS -->
+
+    <!-- Section 5 Container: Analytics -->
+    <Node ToolID="205">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="768" y="96" width="1230" height="960" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SECTION 5 · KPI ANALYTICS &amp; VISUALIZATIONS</Caption>
+          <Style TextColor="#4a341b" FillColor="#fff4e6" BorderColor="#4a341b" Transparency="18" Margin="28" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <ChildNode ToolID="74" />
+        <ChildNode ToolID="132" />
+        <ChildNode ToolID="99" />
+        <ChildNode ToolID="110" />
+        <ChildNode ToolID="112" />
+        <ChildNode ToolID="124" />
+        <ChildNode ToolID="121" />
+        <ChildNode ToolID="123" />
+        <ChildNode ToolID="126" />
+        <ChildNode ToolID="134" />
+        <ChildNode ToolID="136" />
+        <ChildNode ToolID="139" />
+      </ChildNodes>
+    </Node>
+
+    <!-- Analytics Commentary -->
+    <Node ToolID="210">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="780" y="60" width="780" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>ANALYTICS STORYBOARD&#xA;- Summarize tool stack counts arrivals by hour/shift, feeding the interactive Plotly chart.&#xA;- Nurse workload branch calculates patients-per-nurse and sorts chronologically for CSV delivery.&#xA;- Doctor wait heatmap highlights high-severity delays after triage to prioritize staffing adjustments.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
     <!-- =============================================== -->
     
     <!-- Analytics 1: Arrival Pattern Analysis -->
@@ -1347,6 +1628,53 @@ triage level and shift</DefaultAnnotationText>
 
     <!-- =============================================== -->
     <!-- SECTION 6: DATA OUTPUTS -->
+
+    <!-- Section 6 Container: Outputs -->
+    <Node ToolID="206">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1536" y="744" width="516" height="312" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SECTION 6 · CURATED OUTPUT DATASETS</Caption>
+          <Style TextColor="#1d3b2c" FillColor="#e8f8f1" BorderColor="#1d3b2c" Transparency="18" Margin="24" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <ChildNode ToolID="70" />
+        <ChildNode ToolID="130" />
+        <ChildNode ToolID="131" />
+      </ChildNodes>
+    </Node>
+
+    <!-- Output Documentation Comment -->
+    <Node ToolID="207">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1536" y="690" width="480" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>OUTPUT CONSUMERS &amp; REFRESH CADENCE&#xA;- final_data.csv → Used in Datathon notebooks &amp; Tableau dashboards (daily refresh).&#xA;- patients_per_nurse.csv → Executive staffing huddle (08:00 review).&#xA;- doctor_traffic.csv → ER leadership heatmap (shift handoff briefing).&#xA;All outputs write to C:\Users\dteja\Downloads\datathon\output files\ with overwrite protection enabled.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
     <!-- =============================================== -->
     
     <!-- Output: Master Dataset -->
