@@ -1,0 +1,9 @@
+Arrival_Cohort,Severity,Total_Patients,Waiting_for_Doctor,With_Doctor,Avg_Wait_After_Triage,Max_Wait_After_Triage
+Before 5 AM,ESI-1,42,0,20,0.0,0
+Before 5 AM,ESI-2,158,0,68,0.0,0
+Before 5 AM,ESI-3,283,0,96,0.0,0
+Before 5 AM,ESI-4,77,0,16,0.0,0
+5-6 AM,ESI-1,78,19,38,19.94736842105263,29
+5-6 AM,ESI-2,330,85,159,29.08235294117647,56
+5-6 AM,ESI-3,610,232,213,43.11206896551724,91
+5-6 AM,ESI-4,201,79,56,50.12658227848101,90

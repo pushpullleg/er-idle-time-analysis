@@ -1,0 +1,5 @@
+Severity_Level,Patient_Count,Percent_of_Total,Avg_Doctor_Time_Minutes,Total_Doctor_Time_Minutes,Percent_of_Total_Doctor_Time
+ESI-3,610,50.0,98.6,60146,45.6
+ESI-2,330,27.1,132.1,43593,33.0
+ESI-4,201,16.5,82.1,16502,12.5
+ESI-1,78,6.4,151.3,11801,8.9

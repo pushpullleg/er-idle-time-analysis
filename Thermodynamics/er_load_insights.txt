@@ -1,0 +1,182 @@
+================================================================================
+ER SYSTEM LOAD ANALYSIS - COMPREHENSIVE REPORT
+Meridian City Hospital Emergency Department
+================================================================================
+
+Report Generated: 2025-11-10 17:21:05
+Analysis Period: 2025-01-01 01:00:00 to 2025-04-01 04:00:00
+Duration: 90 days
+
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+The analysis covers a 90-day period of ER operations,
+simulating hourly system load based on patient arrivals and exits. The ER system
+demonstrates cyclical load patterns with significant variability across hours and days.
+
+Key Findings:
+- The ER operates with highly dynamic patient flow
+- Load ranges from 0 to 68 patients in queue
+- Average operational load: 19.9 patients
+- The system experiences peak pressures lasting up to 8 continuous hours
+
+
+================================================================================
+1. LOAD BEHAVIOR ANALYSIS
+================================================================================
+
+Load Pattern Classification: CYCLICAL with significant variability
+
+Peak Activity:
+  - Hour of Day: 11:00-11:59 (avg 46.3 patients)
+  - Maximum recorded: 68 patients
+  - Std Dev: 7.66
+
+Trough Activity:
+  - Hour of Day: 2:00-2:59 (avg 4.3 patients)
+  - Std Dev: 1.91
+
+Interpretation:
+The ER shows a predictable cyclical pattern with peak loads during 11:00-11:59 hours,
+indicating consistent surge periods that likely correspond to business hours. The load is relatively
+stable with a coefficient of variation of 75.67%, suggesting
+moderate operational predictability.
+
+
+================================================================================
+2. PEAKS AND RECOVERY ANALYSIS
+================================================================================
+
+High-Load Period Definition: System Load > Mean + 1 Std Dev (34.95 patients)
+
+Peak Statistics:
+  - Number of high-load events: 100
+  - Maximum peak duration: 8 consecutive hours
+  - Average peak duration: 4.6 hours
+
+Recovery Dynamics:
+The system exhibits strong recovery capability,
+with peaks lasting an average of 4.6 hours.
+This indicates moderate throughput
+and acceptable operational management.
+
+Critical Insight:
+Periods exceeding 8 hours of sustained high load represent critical
+operational stress points requiring immediate intervention or resource augmentation.
+
+
+================================================================================
+3. RESPONSE DYNAMICS - LAG CORRELATION ANALYSIS
+================================================================================
+
+Lag Correlation Results (Exits vs Arrivals):
+
+  lag_1_hours: +0.6733
+  lag_2_hours: +0.8232
+  lag_3_hours: +0.9077
+  lag_4_hours: +0.7739
+  lag_5_hours: +0.6270
+  lag_6_hours: +0.4639
+
+Interpretation:
+The maximum correlation (+0.9077) occurs at lag_3_hours, indicating that
+exit patterns best align with arrival patterns from 3 hours prior.
+
+Operational Meaning:
+- High positive correlation: Exits respond quickly to arrivals (efficient throughput)
+- Time lag indicates: Average patient processing time from arrival to exit
+- Implication: Staff capacity appears well-matched with patient flow
+
+Recommendations:
+The exit lag of approximately 3 hours suggests that patients take
+this long to progress through the ER. Consider analyzing:
+- Triage efficiency
+- Doctor availability bottlenecks
+- Bed turnover times
+- Discharge processing delays
+
+
+================================================================================
+4. SYSTEM EFFICIENCY - THROUGHPUT ANALYSIS
+================================================================================
+
+Overall Throughput Metrics:
+  - Total Arrivals (90 days): 15,000 patients
+  - Total Exits (90 days): 15,000 patients
+  - Throughput Ratio: 100.00%
+  - Backlog: 0 patients remaining
+
+Daily Throughput Analysis:
+  - Average daily ratio: 100.01%
+  - Range: 95.11% to 106.38%
+
+Efficiency Assessment:
+A throughput ratio of 100.00% indicates that approximately
+100.0% of arriving patients exit daily. 
+The high ratio
+suggests efficient throughput.
+
+Daily variability of 11.27% indicates
+operational inconsistency, possibly due to staffing variations or admission patterns.
+
+
+================================================================================
+5. STRATEGIC INSIGHTS AND RECOMMENDATIONS
+================================================================================
+
+Key Operational Findings:
+
+1. CAPACITY & LOAD MANAGEMENT
+   - Peak load of 68 patients occurs at Friday 11:00
+   - 95th percentile load: 47 patients
+   - Volatility is high (rolling 24-hr std dev: 20.98)
+   
+   ACTION ITEMS:
+   ✓ Increase staffing during identified peak hours (11:00-11:59)
+   ✓ Implement surge protocols when load exceeds 47 patients
+   ✓ Cross-train staff to handle surge capacity
+
+2. DISCHARGE & EXIT OPTIMIZATION
+   - Current exit lag: approximately 3 hours after arrival
+   - Throughput ratio: 100.00%
+   
+   ACTION ITEMS:
+   ✓ Streamline discharge processes to reduce patient dwell time
+   ✓ Implement bed management protocols
+   ✓ Consider fast-track pathways for lower-acuity patients
+   ✓ Improve coordination between doctor and exit/admission decisions
+
+3. TRIAGE & FLOW EFFICIENCY
+   - Load stability coefficient of variation: 75.67%
+   - Predictable patterns enable proactive scheduling
+   
+   ACTION ITEMS:
+   ✓ Align triage staff capacity with predictable hourly patterns
+   ✓ Pre-position resources before known peak hours
+   ✓ Implement dynamic triage to prioritize faster-resolution cases
+
+4. RESOURCE ALLOCATION
+   - Highest utilization: 11:00-11:59 (mean 46.3 patients)
+   - Lowest utilization: 2:00-2:59 (mean 4.3 patients)
+   - Peak-to-trough ratio: 10.9x
+   
+   ACTION ITEMS:
+   ✓ Implement shift overlaps during transition hours
+   ✓ Use part-time/on-call staff for surge periods
+   ✓ Consider shift scheduling optimization to match demand patterns
+
+5. PREDICTIVE MONITORING
+   - System load is ('highly', 'moderately', 'weakly')[min(2, int((metrics['overall_throughput_ratio']*100)/50))] predictable
+   - Implement real-time load monitoring dashboards
+   
+   ACTION ITEMS:
+   ✓ Set alerts at 75th percentile (32) and 90th percentile (43)
+   ✓ Activate surge protocols when 95th percentile exceeded
+   ✓ Enable staff to anticipate capacity constraints
+
+
+================================================================================
+END OF REPORT
+================================================================================

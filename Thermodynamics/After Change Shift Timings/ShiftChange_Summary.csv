@@ -1,0 +1,12 @@
+Metric,Before,After,Unit,% Change
+Peak Hour (10-12 AM) - Avg Load,44.76,44.76,patients,+0.0%
+Peak Hour (10-12 AM) - Workload per Doctor,7.46,6.39,patients/doctor,-14.3%
+Day Shift (7 AM-3 PM) - Avg Load,37.68,37.68,patients,+0.0%
+Day Shift (7 AM-3 PM) - Workload per Doctor,6.28,5.38,patients/doctor,-14.3%
+Evening Shift (3-11 PM) - Avg Load,15.19,15.19,patients,+0.0%
+Evening Shift (3-11 PM) - Workload per Doctor,3.04,3.80,patients/doctor,+25.0%
+Night Shift (11 PM-7 AM) - Workload per Doctor,1.72,1.72,patients/doctor,+0.0%
+Overall System - Avg Load,19.89,19.89,patients,+0.0%
+Overall System - Avg Workload per Doctor,3.68,3.63,patients/doctor,-1.4%
+Peak Load (Maximum),68.00,68.00,patients,+0.0%
+Peak Workload per Doctor (Maximum),11.33,10.75,patients/doctor,-5.1%

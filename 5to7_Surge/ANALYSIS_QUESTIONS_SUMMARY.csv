@@ -1,0 +1,16 @@
+Question,Metric,Value,Unit,Finding
+Q1: Why is there a 5-7 AM surge?,Surge Arrivals (5-6 AM),1219.0,patients,1219 patients arrived during surge window
+Q1: Why is there a 5-7 AM surge?,Backlog Patients (before 5 AM),862.0,patients,862 patients already in system from overnight
+Q1: Why is there a 5-7 AM surge?,Total System Load by 6:59 AM,2081.0,patients,2081 total patients in ED by 6:59 AM
+Q2: What is the bottleneck?,Average Doctor Time,108.5,minutes,Doctor processing takes 108.5 min (PRIMARY BOTTLENECK)
+Q2: What is the bottleneck?,Average Registration Time,7.5,minutes,Registration takes 7.5 min (efficient)
+Q2: What is the bottleneck?,Average Triage Time,12.7,minutes,Triage takes 12.7 min (efficient)
+Q2: What is the bottleneck?,Patients Waiting for Doctor,571.0,patients,571 patients in queue waiting for doctor
+Q2: What is the bottleneck?,Patients With Doctor,666.0,patients,666 patients currently with doctor (avg 108.5 min each)
+Q3: Is it severity driving delays?,ESI-1 patients,130.0,patients,"ESI-1: 130 patients (6.2%), avg wait 16.8 min"
+Q3: Is it severity driving delays?,ESI-2 patients,561.0,patients,"ESI-2: 561 patients (27.0%), avg wait 26.2 min"
+Q3: Is it severity driving delays?,ESI-3 patients,1053.0,patients,"ESI-3: 1053 patients (50.6%), avg wait 39.5 min"
+Q3: Is it severity driving delays?,ESI-4 patients,337.0,patients,"ESI-4: 337 patients (16.2%), avg wait 47.8 min"
+Q4: What is backlog impact?,Backlog Patients Still Using Doctor Time,862.0,patients,862 (100.0%) still with doctor or exiting
+Q5: Where is every patient?,Exited by 6:59 AM,669.0,patients,669 (32.1%) successfully exited system
+Q5: Where is every patient?,Still in System,1412.0,patients,1412 (67.9%) still awaiting or in process

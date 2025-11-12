@@ -105,7 +105,7 @@ for hospital in df['Hospital ID'].unique():
             doctor_seen = patient['Doctor Seen']
             wait_time = (doctor_seen - triage_end).total_seconds() / 60
             
-            if wait_time > 5:  # Only consider waits > 5 minutes
+            if wait_time > 10:  # Only consider waits > 10 minutes
                 # Check at the moment triage ended
                 # Use 10-minute buffer: doctor needs time after patient exits for 
                 # documentation, handwashing, room turnover, chart review
