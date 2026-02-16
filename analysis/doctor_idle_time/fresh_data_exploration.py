@@ -1,9 +1,13 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
 
 # Load the data
-df = pd.read_csv('/Users/mukeshravichandran/Datathon/final_data.csv')
+df = pd.read_csv(DATA_DIR / "cleaned" / "final_data.csv")
 
 print("="*80)
 print("SYSTEMATIC DATA EXPLORATION - CHAIN OF THOUGHT")

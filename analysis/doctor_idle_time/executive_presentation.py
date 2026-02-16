@@ -3,14 +3,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
+from pathlib import Path
+
 warnings.filterwarnings('ignore')
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
+OUTPUT_DIR = Path(__file__).resolve().parent
 
 plt.style.use('seaborn-v0_8-darkgrid')
 COLORS = {'primary': '#1f77b4', 'danger': '#d62728', 'success': '#2ca02c', 
           'warning': '#ff7f0e', 'info': '#17becf', 'neutral': '#7f7f7f'}
 
 print("Loading data...")
-df = pd.read_csv('/Users/mukeshravichandran/Datathon/final_data.csv')
+df = pd.read_csv(str(PROJECT_ROOT / "data" / "cleaned" / "final_data.csv"))
 time_cols = ['Arrival Time', 'Triage Start', 'Triage End', 'Doctor Seen', 'Exit Time']
 for col in time_cols:
     df[col] = pd.to_datetime(df[col])
@@ -55,17 +61,17 @@ print(f"Found {len(idle_df)} events")
 print("Exporting data...")
 idle_df.nlargest(20, 'Wait Time (min)')[['Timestamp', 'Shift', 'Wait Time (min)', 
     'Idle Doctors', 'Patients Waiting', 'Triage Level']].to_csv(
-    '/Users/mukeshravichandran/Datathon/Doctor_Idle_Time/top_opportunities.csv', index=False)
+    str(OUTPUT_DIR / "top_opportunities.csv"), index=False)
 
 idle_df.groupby('Shift').agg({
     'Wait Time (min)': ['count', 'mean', 'median', 'max', 'sum'],
     'Idle Doctors': 'mean', 'Patients Waiting': 'mean'
-}).round(1).to_csv('/Users/mukeshravichandran/Datathon/Doctor_Idle_Time/shift_performance_summary.csv')
+}).round(1).to_csv(str(OUTPUT_DIR / "shift_performance_summary.csv"))
 
 idle_df['Hour'] = pd.to_datetime(idle_df['Timestamp']).dt.hour
 idle_df.groupby('Hour').agg({
     'Wait Time (min)': ['count', 'mean'], 'Idle Doctors': 'mean', 'Patients Waiting': 'mean'
-}).round(1).to_csv('/Users/mukeshravichandran/Datathon/Doctor_Idle_Time/hourly_pattern.csv')
+}).round(1).to_csv(str(OUTPUT_DIR / "hourly_pattern.csv"))
 
 print("Creating dashboards...")
 
@@ -140,7 +146,7 @@ opps = [f"• {inefficient_visits:,} events to fix", f"• {idle_df['Wait Time (
 for i, opp in enumerate(opps):
     ax8.text(0.1, 0.7-i*0.12, opp, fontsize=10)
 
-plt.savefig('/Users/mukeshravichandran/Datathon/Doctor_Idle_Time/executive_dashboard.png', dpi=300, bbox_inches='tight')
+plt.savefig(str(OUTPUT_DIR / "executive_dashboard.png"), dpi=300, bbox_inches='tight')
 print("✓ executive_dashboard.png")
 plt.close()
 
@@ -167,7 +173,7 @@ axes[1,1].bar(['Current','Phase 1','Phase 2','Target'],
 axes[1,1].set_title('Reduction Roadmap')
 
 plt.tight_layout()
-plt.savefig('/Users/mukeshravichandran/Datathon/Doctor_Idle_Time/root_cause_analysis.png', dpi=300, bbox_inches='tight')
+plt.savefig(str(OUTPUT_DIR / "root_cause_analysis.png"), dpi=300, bbox_inches='tight')
 print("✓ root_cause_analysis.png")
 plt.close()
 
@@ -218,7 +224,7 @@ for month, text in [(1,'First results'),(3,'Workflow done'),(5,'Staffing live'),
     ax.text(month, 0.5, text, rotation=90, va='bottom', fontsize=8, color=COLORS['danger'])
 
 plt.tight_layout()
-plt.savefig('/Users/mukeshravichandran/Datathon/Doctor_Idle_Time/implementation_roadmap.png', dpi=300, bbox_inches='tight')
+plt.savefig(str(OUTPUT_DIR / "implementation_roadmap.png"), dpi=300, bbox_inches='tight')
 print("✓ implementation_roadmap.png")
 plt.close()
 

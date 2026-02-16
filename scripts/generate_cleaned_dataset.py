@@ -1,7 +1,11 @@
 import pandas as pd
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
 
 # Read the final_data.csv
-df = pd.read_csv('/Users/mukeshravichandran/Datathon/final_data.csv')
+df = pd.read_csv(DATA_DIR / "cleaned" / "final_data.csv")
 
 # Select only the columns you need
 columns_needed = [
@@ -42,7 +46,7 @@ print(f"\nMissing values:")
 print(cleaned_df.isnull().sum())
 
 # Save the cleaned dataset
-output_path = '/Users/mukeshravichandran/Datathon/final_data_cleaned.csv'
+output_path = DATA_DIR / "cleaned" / "final_data_cleaned.csv"
 cleaned_df.to_csv(output_path, index=False)
 print(f"\n✅ Cleaned dataset saved to: {output_path}")
 print(f"Total rows: {len(cleaned_df)}")

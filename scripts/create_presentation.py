@@ -4,6 +4,7 @@ DATATHON SUBMISSION: Create Professional PowerPoint Presentation
 Meridian ER Optimization: Emergency Room Efficiencies
 """
 
+from pathlib import Path
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
@@ -273,7 +274,7 @@ add_metric_slide(prs, "The Business Case",
     ])
 
 # Save presentation
-output_path = "/Users/mukeshravichandran/Datathon/DATATHON_SUBMISSION/Meridian_ER_Presentation.pptx"
+output_path = str(Path(__file__).resolve().parent.parent / "presentation" / "Meridian_ER_Presentation.pptx")
 prs.save(output_path)
 
 print(f"✅ PowerPoint presentation created: {output_path}")

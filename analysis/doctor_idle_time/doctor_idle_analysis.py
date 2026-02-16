@@ -28,10 +28,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime, timedelta
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
 
 # Load data
 print("Loading data...")
-df = pd.read_csv('/Users/mukeshravichandran/Datathon/final_data.csv')
+df = pd.read_csv(DATA_DIR / "cleaned" / "final_data.csv")
 
 # Convert time columns to datetime
 time_cols = ['Arrival Time', 'Registration Start', 'Registration End', 

@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime, timedelta
 from scipy import stats
+from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -676,8 +677,9 @@ def main():
     print("=" * 80)
     
     # Define paths
-    input_file = '/Users/mukeshravichandran/Datathon/final_data.csv'
-    output_dir = '/Users/mukeshravichandran/Datathon/Thermodynamics'
+    project_root = Path(__file__).resolve().parent.parent.parent
+    input_file = str(project_root / "data" / "cleaned" / "final_data.csv")
+    output_dir = str(Path(__file__).resolve().parent)
     cleaned_file = f'{output_dir}/improved_final_data.csv'
     simulation_file = f'{output_dir}/er_hourly_load_simulation.csv'
     report_file = f'{output_dir}/er_load_insights.txt'

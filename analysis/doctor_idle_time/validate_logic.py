@@ -1,9 +1,13 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
 
 # Load the cleaned data
-df = pd.read_csv('/Users/mukeshravichandran/Datathon/Doctor_Idle_Time/final_data_cleaned.csv')
+df = pd.read_csv(DATA_DIR / "cleaned" / "final_data_cleaned.csv")
 
 # Convert timestamps to datetime
 df['Triage End Timestamp'] = pd.to_datetime(df['Triage End Timestamp'])
